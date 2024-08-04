@@ -1,11 +1,23 @@
 import rss, { pagesGlobToRssItems } from '@astrojs/rss';
+import { getCollection } from 'astro:content';
+import sanitizeHtml from 'sanitize-html';
+import MarkdownIt from 'markdown-it';
+const parser = new MarkdownIt();
 
-export async function GET(context) {
+export async function GET() {
+	const posts = await getCollection('blog');
 	return rss({
 		title: 'c-studio',
 		description: 'caori_stのWEBとブログ　DIYなど雑多ブログも',
-		site: 'lhttps://c-std.com/',
-		items: await pagesGlobToRssItems(import.meta.glob('./**/*.md')),
+		site: 'https://c-std.com/',
+		items: posts.map((post) => ({
+			title: post.data.title,
+			pubDate: post.data.pubDate,
+			description: post.data.description,
+			link: `/posts/${post.slug}/`,
+			content: sanitizeHtml(parser.render(post.body)),
+			...post.data,
+		})),
 		customData: `<language>ja-jp</language>`,
 	});
 }
