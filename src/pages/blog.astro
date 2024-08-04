@@ -1,9 +1,15 @@
-<body>
-  <a href="/">ホーム</a>
-  <a href="/about/">概要</a>
-  <a href="/blog/">ブログ</a>
+---
+import '../styles/global.css';
+import BaseLayout from '../layouts/BaseLayout.astro';
+import BlogPost from '../components/BlogPost.astro';
+const allPosts = await Astro.glob('../pages/posts/*.md');
+const pageTitle = "Blog";
+---
 
-  <h1>私のAstroサイト</h1>
-  <h1>私のAstro学習ブログ</h1>
-  <p>ここには、私がAstroを学んでいく旅の様子を投稿します。</p>
-</body>
+<BaseLayout pageTitle={pageTitle}>
+    <p>ここには、私がAstroを学んでいく旅の様子を投稿します。</p>
+  
+     <ul>
+       {allPosts.map((post) => <BlogPost url={post.url} title={post.frontmatter.title} />)}
+      </ul>
+</BaseLayout>
