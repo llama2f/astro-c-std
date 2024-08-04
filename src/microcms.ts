@@ -1,3 +1,5 @@
+//未使用中
+
 //SDK利用準備
 import type { MicroCMSQueries } from 'microcms-js-sdk';
 import { createClient } from 'microcms-js-sdk';
@@ -26,14 +28,14 @@ export type BlogResponse = {
 
 //APIの呼び出し
 export const getBlogs = async (queries?: MicroCMSQueries) => {
-	return await client.get<BlogResponse>({ endpoint: 'blogs', queries });
+	return await client.get<BlogResponse>({ endpoint: 'blog', queries });
 };
 export const getBlogDetail = async (
 	contentId: string,
 	queries?: MicroCMSQueries
 ) => {
 	return await client.getListDetail<Blog>({
-		endpoint: 'blogs',
+		endpoint: 'blog',
 		contentId,
 		queries,
 	});
