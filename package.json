@@ -12,13 +12,18 @@
 	"dependencies": {
 		"@astrojs/preact": "^3.5.1",
 		"@astrojs/rss": "^4.0.7",
+		"@astrojs/sitemap": "^3.1.6",
 		"astro": "^4.13.0",
+		"astro-breadcrumbs": "^2.3.1",
+		"astro-seo-schema": "^4.0.2",
 		"markdown-it": "^14.1.0",
-		"microcms-js-sdk": "^3.1.2",
+		"modern-css-reset": "^1.4.0",
 		"postcss-preset-env": "^10.0.0",
 		"preact": "^10.23.1",
 		"sanitize-html": "^2.13.0",
-		"sass": "^1.77.8"
+		"sass": "^1.77.8",
+		"schema-dts": "^1.1.2",
+		"sharp": "^0.33.4"
 	},
 	"packageManager": "yarn@1.22.22"
 }

@@ -1,60 +1,44 @@
 ---
 import '../styles/global.css';
 import BaseLayout from '../layouts/BaseLayout.astro';
+import { Breadcrumbs } from "astro-breadcrumbs";
 const pageTitle = "About c-studio";
+const pubDate= new Date("2023-03-25").toLocaleDateString()
+const upDate=new Date("2023-08-05").toLocaleDateString()
 
-const identity = {
-  firstName: "サラ",
-  country: "カナダ",
-  occupation: "技術ライター",
-  hobbies: ["写真", "バードウォッチング", "野球"],
-}
-const skills = ["HTML", "CSS", "JavaScript", "React", "Astro", "ドキュメントの執筆"];
+const works=["WEBデザイン、コーディング、制作全般","事業用管理プログラム等制作","イラスト制作"]
 
-const happy = true;
-const finished = true;
-const goal = 3;
+const skills = ["WEBデザイン","WEBライティング","HTML", "CSS","SCSS", "JavaScript", "Wordpress", "Astro", "イラストレーション"];
 
-const skillColor = "navy";
-const fontWeight ="bold";
-const textCase = "uppercase";
+const softs=[ "VSCode","Figma","Affinity Desinger", "Affinity Photo", "ClipStudio"]
+
 ---
-		<style define:vars={{skillColor,fontWeight,textCase}}>
-  h1 {
-    color: purple;
-    font-size: 4rem;
-  }
-  .skill {
-    color: var(--skillColor);
-		    font-weight: var(--fontWeight);
-				text-transform: var(--textCase);
-  }
-</style>
-<BaseLayout pageTitle={pageTitle}>
-	
-
-<h2>... そして私の新しいAstroサイトについて！</h2>
-
-  <p>私はAstroの入門チュートリアルを進めています。これは私のウェブサイトの2番目のページで、自分で作った初めてのページです！</p>
-
-  <p>このサイトはチュートリアルを進めるにつれて更新されていきます。定期的にチェックして、私の旅の様子を見に来てください！</p>
-
-	<p>以下は私に関するいくつかの事実です。</p>
+<BaseLayout pageTitle={pageTitle} pubDate={pubDate} upDate={upDate}>
+  <Breadcrumbs/>
+	<h2>お仕事</h2>
 <ul>
-  <li>私の名前は{identity.firstName}です。</li>
-  <li>{identity.country}に住んでおり、{identity.occupation}として働いています。</li>
-  {identity.hobbies.length >= 2 &&
-    <li>私の2つの趣味は{identity.hobbies[0]}と{identity.hobbies[1]}です。</li>
-  }
+  {works.map((work) => <li class="work">{work}</li>)}
 </ul>
-<p>私のスキルは以下の通りです。</p>
+
+
+<h2>できること</h2>
 <ul>
   {skills.map((skill) => <li class="skill">{skill}</li>)}
 </ul>
 
-{happy && <p>I am happy to be learning Astro! Astroを学べて幸せです！</p>}
+<h2>使っているソフト</h2>
+<ul>
+  {softs.map((soft) => <li class="soft">{soft}</li>)}
+</ul>
 
-{finished && <p>I finished this tutorial! このチュートリアルを終えました！</p>}
+<div><p>
+  宮城県在住のWEB屋、イラストレーターです。ものづくり全般、アクアリウム、魚や爬虫類両生類好きです。DIYで自宅をいじったりしています。
+</p>
 
-{goal === 3 ? <p>My goal is to finish in 3 days. 3日で終えるのが目標です。</p> : <p>My goal is not 3 days. 3日が目標ではありません。</p>}
+<p>
+  イラストはSNS用のアイコンから企業様のWEBイラスト等多岐にわたり制作しております。
+ WEBサイト構築については、地元企業様などによくご利用いただいております。どんなご希望も承りますので、ぜひお気軽にご相談ください。
+</p></div>
+
+
 </BaseLayout>

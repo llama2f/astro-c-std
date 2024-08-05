@@ -1,0 +1,18 @@
+---
+import '../styles/global.css';
+import BaseLayout from '../layouts/BaseLayout.astro';
+import { Breadcrumbs } from "astro-breadcrumbs";
+const pageTitle = "Contact";
+const pubDate= new Date("2023-03-25").toLocaleDateString()
+const upDate=new Date("2023-08-05").toLocaleDateString()
+
+---
+	
+</style>
+<BaseLayout pageTitle={pageTitle} pubDate={pubDate} upDate={upDate}>
+  <Breadcrumbs/>
+お仕事のご依頼、ご相談はじめどのようなことでもお気軽にお問い合わせください。
+
+※1週間以内に返信を致します。返信ない場合はお手数ですがもう一度送信いただくか、Twitter（@caori_st）などにご連絡ください。
+
+</BaseLayout>

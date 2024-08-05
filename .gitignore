@@ -1,5 +1,8 @@
 # build output
 dist/
+output/
+export.xml
+
 # generated types
 .astro/
 

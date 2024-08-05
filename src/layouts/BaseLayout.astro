@@ -1,9 +1,11 @@
 ---
+import { Schema } from "astro-seo-schema"
+import "modern-css-reset";
 import '../styles/global.css';
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
 
-const {pageTitle} = Astro.props;
+const {pageTitle,pubDate,upDate} = Astro.props;
 ---
 
 <html lang="ja">
@@ -13,13 +15,33 @@ const {pageTitle} = Astro.props;
 		<meta name="viewport" content="width=device-width" />
 		<meta name="generator" content="{Astro.generator}" />
 		<title>{pageTitle}</title>
+		<link rel="sitemap" href="/sitemap-index.xml" />
+
+		 
 	</head>
 	<Header/>
 		<h1>{pageTitle}</h1>		 
     <slot />
-	<Footer />
+	<Footer pubDate={pubDate} upDate={upDate} />
 	<script>
 		import "../scripts/menu.js"
 	</script>
 	</body>
+
+	<Schema
+            item={{
+                "@context": "https://schema.org",
+                "@type": "WebSite",
+                name: "c-studio",
+								url: Astro.site,
+            }}
+        />
 </html>
+
+<style lang="scss">
+body{
+	background-color: $bgCol1;
+color:$baseTextCol;
+}
+
+</style>

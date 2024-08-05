@@ -1,5 +1,6 @@
 ---
 import { getCollection } from "astro:content";
+import { Breadcrumbs } from "astro-breadcrumbs";
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import BlogPost from '../../components/BlogPost.astro';
 
@@ -22,9 +23,10 @@ const { tag } = Astro.params;
 const { posts } = Astro.props; 
 ---
 <BaseLayout pageTitle={tag}>
+  <Breadcrumbs />
   <p>{tag}のタグが付いた記事</p>
   
    <ul>
-     {posts.map((post) => <BlogPost url={`/posts/` + post.slug} title={post.data.title}/>)}
+     {posts.map((post) => <BlogPost url={`/` + post.slug} title={post.data.title}/>)}
   </ul>
 </BaseLayout>
