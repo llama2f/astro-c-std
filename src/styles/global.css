@@ -7,6 +7,12 @@ html.dark {
 	color: #fff;
 }
 
+/* 基本のスタイル */
+
+p:not(:first-of-type) {
+	margin-top: 1rem;
+}
+
 img {
 	height: auto;
 }

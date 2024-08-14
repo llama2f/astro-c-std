@@ -1,0 +1,12 @@
+--- configured ---
+database : obsidiannotes
+E2EE passphrase: delicate-sky-24592
+--- setup uri ---
+Initialize octagonal-wheels@0.1.11
+Initialize xxhash-wasm@0.4.2
+Initialize xxhash-wasm@1.0.2
+Initialize idb@8.0.0
+obsidian://setuplivesync?settings=%2598b179e493d292dc1b7dc26301000000ae90bc5df5e19c0e99b63f686db96ab3SiGswSmuQ%2BbOO%2Ft2J1zepjeGxK%2BMLcJf9b9GYFznbGwnq1U7siX3wzFFMuCPoeK2AuVDg52vxBCUvIBs9QLWR5YUWmgQcuR6OPTpcmmk%2Fn6N%2FodxeSnWeHduz2jTqmepsRQ%2B7GksirqBoczL4l2WMcS1wpvsyhLYgFkOKLsSvI9yko3Hd9kR%2BSprHvMXgmeS13ajeiF0ZbGa7kjUJ3TyIgGpnONXnnobmUkihkTnigxf6UoSr%2FYpK8HeXzbIyJgCwJJ4HiJTVKRRA92L5q5kDYKCGg1vftpTuAcOxlv%2FEnKAbjKqi6iTEEqWu5PRRlt%2FSPr2AlGp6tHA%2FgFKNeFJFt5ghpYObrVT31K5tW%2F4d9%2Fb8DAexx8EgUQy1Fc4g5T%2BUF%2FaEnrYBcEP1w8GPstojr0o0JJyT%2FkMhJnVKv4YdNTQm3%2BSzVAwhve3X%2F29HpQfleU4iL0fJAWh3th%2FrpjzVGVYa%2BeZAMAfsmRZ8pQYpMerFUoP3grkInvtp5Dp4%2BANGmMA5OPEkR5jcwDBUCPly0FyN3I0aRo47%2FXr9Y801XSUN%2F6k3vDt7ihuRV6zl0EXcW%2FFSzrNz4wGbKjfcPKpJ2JemINRQrio4mKmiU6sQzkZ6lhDh10c6ogUWeWF44MD9bThK4ov%2FmhfotOtw8yZjgxn2dzuwU7uhLv7F9wLA97Q98PE2wTk6ZO0KAHHKLu0ukGmz4h4zoitsNpyXixi57Muir%2FUsg%3D%3D
+
+Your passphrase of Setup-URI is: bitter-glitter
+This passphrase is never shown again, so please note it in a safe place.

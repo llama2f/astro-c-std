@@ -1,0 +1,13 @@
+---
+const { publishedYear, owner } = Astro.props;
+const today = new Date();
+const currentYear = today.getFullYear().toString();
+---
+
+<style>
+  p {
+    margin: 0;
+  }
+</style>
+
+<p>© {publishedYear >= currentYear ? publishedYear : `${publishedYear}-${currentYear}`} {owner}</p>

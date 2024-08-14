@@ -21,10 +21,13 @@ const {pageTitle,pubDate,upDate} = Astro.props;
 	</head>
 	<Header/>
 		<h1>{pageTitle}</h1>		 
-    <slot />
+    <main>
+			<slot />
+		</main>
 	<Footer pubDate={pubDate} upDate={upDate} />
 	<script>
 		import "../scripts/menu.js"
+		import "../scripts/link.js"
 	</script>
 	</body>
 
@@ -41,7 +44,6 @@ const {pageTitle,pubDate,upDate} = Astro.props;
 <style lang="scss">
 body{
 	background-color: $bgCol1;
-color:$baseTextCol;
+	color:$baseTextCol;
 }
-
 </style>

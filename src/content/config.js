@@ -1,17 +1,13 @@
-// 1. Import utilities from `astro:content`
-import { z, defineCollection, reference } from 'astro:content';
-// 2. Define a `type` and `schema` for each collection
+// 1. ユーティリティを`astro:content`からインポート
+import { z, defineCollection } from 'astro:content';
+// 2. 各コレクションに`type`と`schema`を定義
 const blog = defineCollection({
 	type: 'content', // v2.5.0 and later
 	schema: z.object({
 		title: z.string(),
 		tags: z.array(z.string()),
-		image: z.object({
-			url: z.string(),
-			alt: z.string(),
-		}),
+		categories: z.array(z.string().default('etc')),
 		pubDate: z.date(),
-		relatedPosts: z.array(reference('blog')),
 		author: z.string().default('caori'),
 		isDraft: z.boolean(),
 	}),

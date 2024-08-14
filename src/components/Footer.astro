@@ -1,16 +1,9 @@
 ---
 import Social from './Social.astro';
 import Dates from './Dates.astro';
+import Copyright from './Copyright.astro';
 const {pubDate,upDate} =Astro.props
 ---
-
-<style>
-  .social {
-    display: flex;
-    gap: 1rem;
-    margin-top: 2rem;
-  }
-</style>
 
 <footer>
   <div>
@@ -22,4 +15,24 @@ const {pubDate,upDate} =Astro.props
     <Social platform="github" username="llama2f" />
 </div>
 <Dates pubDate={pubDate} upDate={upDate}/>
+<Copyright publishedYear="2023" owner="caori" />
 </footer>
+
+<style lang="scss">
+
+  footer{
+    color: $bgCol1;
+    background-color: $footerBgCol;
+    margin-top: 5rem;
+    padding: 1rem $footerPd;
+
+    a{
+      color: $bgCol1;
+    }
+  }
+  .social {
+    display: flex;
+    gap: 1rem;
+    margin-top: 2rem;
+  }
+</style>
