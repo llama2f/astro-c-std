@@ -10,7 +10,7 @@ categories:
   - electronics
 pubDate: 2024-08-14
 upDate: 
-image: 
+image: noimage.png
 description: 
 author: caori
 isDraft: true

@@ -6,7 +6,7 @@ categories:
 tags:
   - ヘルパンギーナ
   - 日記
-coverImage: 地獄の-ヘルパンギーナ_20230809_144422_0000.jpg
+image: 地獄の-ヘルパンギーナ_20230809_144422_0000.jpg
 isDraft: false
 ---
 

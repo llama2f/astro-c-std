@@ -6,7 +6,7 @@ tags:
 categories:
   - electronics
 pubDate: 2024-08-14
-image: 
+image: noimage.png
 author: caori
 isDraft: true
 ---

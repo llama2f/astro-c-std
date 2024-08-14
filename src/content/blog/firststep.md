@@ -6,6 +6,7 @@ categories:
 isDraft: true
 tags:
   - 住宅性能
+image: noimage.png
 ---
 
 自宅をリカバリーするきっかけについて書いておこうと思います。　

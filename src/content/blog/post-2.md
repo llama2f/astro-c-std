@@ -11,7 +11,7 @@ tags:
 isDraft: false
 categories:
   - etc
-image:
+image: ./noimage.png
 ---
 
 Astro を学習し始めて最初の 1 週間が上手くいったので、もう少し試してみることにしました。小さなコンポーネントを書いてメモリーからインポートしました！

@@ -10,7 +10,7 @@ categories:
   - electronics
 pubDate: <% tp.date.now() %>
 upDate: 
-image: 
+image: noimage.png
 description: 
 author: caori
 isDraft: true

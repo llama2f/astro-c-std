@@ -7,7 +7,7 @@ tags:
   - スマートホーム
   - スマートメーター
   - 電気
-coverImage: b-root_thumb.jpg
+image: b-root_thumb.jpg
 isDraft: false
 ---
 
