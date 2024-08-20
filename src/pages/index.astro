@@ -1,35 +1,34 @@
 ---
-import { Image } from 'astro:assets';
-import frontImage from "../assets/illusts/yagi_comp.png"
-import '../styles/global.css';
-import BaseLayout from '../layouts/BaseLayout.astro';
-import { Breadcrumbs } from "astro-breadcrumbs";
+import { Image } from 'astro:assets'
+import frontImage from '../assets/illusts/yagi_comp.png'
+import '../styles/global.css'
+import BaseLayout from '../layouts/BaseLayout.astro'
+import { Breadcrumbs } from 'astro-breadcrumbs'
 
-const pageTitle = "c-studio";
-const pubDate= new Date("2023-03-25").toLocaleDateString()
-const upDate=new Date("2023-08-05").toLocaleDateString()
+const pageTitle = 'c-studio'
+const pubDate = new Date('2023-03-25').toLocaleDateString()
+const upDate = new Date('2023-08-05').toLocaleDateString()
 
 const schema = JSON.stringify({
-    "@context": "https://schema.org",
-    "@type": "WebSite",
-    name: import.meta.env.SITE_NAME,
-    url: Astro.site
-});
+  '@context': 'https://schema.org',
+  '@type': 'WebSite',
+  name: import.meta.env.SITE_NAME,
+  url: Astro.site,
+})
 ---
 
 <BaseLayout pageTitle={pageTitle} pubDate={pubDate} upDate={upDate}>
-<Breadcrumbs/>
-<div class="frontText">
-  <p>c-studioではイラスト、WEB制作などのお仕事をお受けしています。</p>
-  <p>当サイトではお問い合わせやイラストサンプル置き場のほか、ブログで自宅DIYなどを記録しています。</p>
-  <p>詳しくは<a href="about">aboutページ</a>をご覧ください。</p>
-</div>
+  <Breadcrumbs />
+  <div class="frontText">
+    <p>c-studioではイラスト、WEB制作などのお仕事をお受けしています。</p>
+    <p>
+      当サイトではお問い合わせやイラストサンプル置き場のほか、ブログで自宅DIYなどを記録しています。
+    </p>
+    <p>詳しくは<a href="about">aboutページ</a>をご覧ください。</p>
+  </div>
 
+  <h2>Blog</h2>
 
-
-
-<h2>Blog</h2>
-
-<h2>Illust</h2>
-  <Image src={frontImage} alt='capricorn' class='topImage' />
+  <h2>Illust</h2>
+  <Image src={frontImage} alt="capricorn" class="topImage" />
 </BaseLayout>

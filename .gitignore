@@ -26,3 +26,7 @@ pnpm-debug.log*
 # jetbrains setting folder
 .idea/
 "\n.astro" 
+
+blog/.obsidian/
+blog/.trash/
+blog/.git/

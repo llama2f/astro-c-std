@@ -1,12 +1,7 @@
 {
   "command_timeout": 5,
   "templates_folder": "_template",
-  "templates_pairs": [
-    [
-      "",
-      ""
-    ]
-  ],
+  "templates_pairs": [["", ""]],
   "trigger_on_file_creation": false,
   "auto_jump_to_cursor": false,
   "enable_system_commands": false,
@@ -21,10 +16,6 @@
   ],
   "syntax_highlighting": true,
   "syntax_highlighting_mobile": false,
-  "enabled_templates_hotkeys": [
-    ""
-  ],
-  "startup_templates": [
-    ""
-  ]
+  "enabled_templates_hotkeys": [""],
+  "startup_templates": [""]
 }

@@ -1,16 +1,18 @@
 ---
 title: astrofirst
 tags:
-  - ブログ
+  - astro
+  - Web
 categories:
   - web
 pubDate: 2024-08-14
-upDate: 
+upDate:
 image: noimage.png
-description: 
+description:
 author: caori
 isDraft: true
 ---
+
 # Astro を最初からやってみる
 
 [Astro](https://astro.build/)
@@ -80,16 +82,16 @@ src/pages/index.astro を編集する
 
 ```html
 <html lang="ja">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content="{Astro.generator}" />
-		<title>Livingpokke</title>
-	</head>
-	<body>
-		<h1>Hello World</h1>
-	</body>
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="generator" content="{Astro.generator}" />
+    <title>Livingpokke</title>
+  </head>
+  <body>
+    <h1>Hello World</h1>
+  </body>
 </html>
 ```
 
@@ -111,18 +113,18 @@ index.astro を src/pages/about.astro として複製保存し、内容を書き
 
 ```html
 <body>
-	<a href="/">ホーム</a>
-	<a href="/about/">概要</a>
-	<h1>私について</h1>
-	<h2>... そして私の新しいAstroサイトについて！</h2>
+  <a href="/">ホーム</a>
+  <a href="/about/">概要</a>
+  <h1>私について</h1>
+  <h2>... そして私の新しいAstroサイトについて！</h2>
 
-	<p>
-		私はAstroの入門チュートリアルを進めています。これは私のウェブサイトの2番目のページで、自分で作った初めてのページです！
-	</p>
+  <p>
+    私はAstroの入門チュートリアルを進めています。これは私のウェブサイトの2番目のページで、自分で作った初めてのページです！
+  </p>
 
-	<p>
-		このサイトはチュートリアルを進めるにつれて更新されていきます。定期的にチェックして、私の旅の様子を見に来てください！
-	</p>
+  <p>
+    このサイトはチュートリアルを進めるにつれて更新されていきます。定期的にチェックして、私の旅の様子を見に来てください！
+  </p>
 </body>
 ```
 
@@ -130,22 +132,22 @@ index.astro を src/pages/about.astro として複製保存し、内容を書き
 
 ```html
 <body>
-	<a href="/">ホーム</a>
-	<a href="/about/">概要</a>
-	<a href="/blog/">ブログ</a>
+  <a href="/">ホーム</a>
+  <a href="/about/">概要</a>
+  <a href="/blog/">ブログ</a>
 
-	<h1>私のAstroサイト</h1>
-	<h1>私のAstro学習ブログ</h1>
-	<p>ここには、私がAstroを学んでいく旅の様子を投稿します。</p>
+  <h1>私のAstroサイト</h1>
+  <h1>私のAstro学習ブログ</h1>
+  <p>ここには、私がAstroを学んでいく旅の様子を投稿します。</p>
 </body>
 ```
 
 ## markdown でブログコンテンツを作成する
 
--   src/pages/posts フォルダを作成する
--   post-1.md という空のファイルを posts に追加
--   http://localhost:4321/posts/post-1 を確認
--   http://localhost:4321/posts/post-2 （存在しない）を確認
+- src/pages/posts フォルダを作成する
+- post-1.md という空のファイルを posts に追加
+- http://localhost:4321/posts/post-1 を確認
+- http://localhost:4321/posts/post-2 （存在しない）を確認
 
 1 は空白ページ、2 は 404 が表示される
 
@@ -158,8 +160,8 @@ pubDate: 2022-07-01
 description: 'これは私の新しいAstroブログの最初の記事です。'
 author: 'Astro学習者'
 image:
-    url: 'https://docs.astro.build/assets/full-logo-light.png'
-    alt: 'Astroのロゴ。'
+  url: 'https://docs.astro.build/assets/full-logo-light.png'
+  alt: 'Astroのロゴ。'
 tags: ['astro', 'ブログ', '公開学習']
 ---
 
@@ -187,3 +189,7 @@ Astro チュートリアルを終え、さらに記事を追加していきま�
 Could not find Sharp エラー
 ↓
 yarn add sharp --ignore-engines で入れたら解決した
+
+markdown 内画像の sharp エラー
+↓
+yarn のバージョン上げて yarn install でかいけつ

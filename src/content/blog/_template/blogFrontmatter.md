@@ -9,9 +9,10 @@ categories:
   - illust
   - electronics
 pubDate: <% tp.date.now() %>
-upDate: 
+upDate: 2024-08-16
 image: noimage.png
-description: 
+description:
 author: caori
 isDraft: true
+cDate: 2024-08-13
 ---

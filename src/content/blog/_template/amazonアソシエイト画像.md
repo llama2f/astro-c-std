@@ -1,6 +1,1 @@
-<div class="amazon-pr">
-<div class="amazon-pr-image">
-----image----
-</div>
-<p class="amazon-pr-text">---textlink---</p>
-</div>
+<div class="paapi5-pa-ad-unit pull-left"><div class="paapi5-pa-product-container"><div class="paapi5-pa-product-image"><div class="paapi5-pa-product-image-wrapper"><a class="paapi5-pa-product-image-link" href="https://www.amazon.co.jp/dp/B000AQSCGS?tag=ctc-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" title="N/A" target="_blank"></a><img class="paapi5-pa-product-image-source" src="https://m.media-amazon.com/images/I/41g25VX2mBL._SL500_.jpg" alt="N/A"></div></div><div class="paapi5-pa-product-details"><div class="paapi5-pa-product-title"><a class="paap5-pa-product-title-link" href="https://www.amazon.co.jp/dp/B000AQSCGS?tag=ctc-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" title="N/A" target="_blank">N/A</a></div><div class="paapi5-pa-product-list-price"><span class="paapi5-pa-product-list-price-value"></span></div><div class="paapi5-pa-product-prime-icon"><span class="icon-prime-all"></span></div></div></div></div>

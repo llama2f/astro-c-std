@@ -1,0 +1,15 @@
+node_modules/
+.astro/
+blog/.obsidian/
+blog/.trash/
+blog/_dairynote/
+blog/_Lists/
+blog/_template/
+blog/images/
+blog/.git/
+dist/
+public/
+*.cjs
+*.mjs
+*.json
+*.txt

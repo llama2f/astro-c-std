@@ -1,24 +1,25 @@
 ---
 const { lists } = Astro.props
 ---
+
 <nav>
   <ol>
     <li>
       <a href="/">home</a>
     </li>
-    
-   {
-     lists.map((list, index) => (
-    <li>
-      {lists.length - 1 !==index ? (
-        <a href={`/${list.path}`}>{list.name}</a>
-       ) : (
-        <span>{list.name}</span>
-       )}
-    </li>
-     ))
-   }
-</ol>
+
+    {
+      lists.map((list, index) => (
+        <li>
+          {lists.length - 1 !== index ? (
+            <a href={`/${list.path}`}>{list.name}</a>
+          ) : (
+            <span>{list.name}</span>
+          )}
+        </li>
+      ))
+    }
+  </ol>
 </nav>
 
 <style>
@@ -26,7 +27,7 @@ const { lists } = Astro.props
     display: inline;
   }
   li:not(:first-child)::before {
-    content: ">";
+    content: '>';
     padding: 0 4px;
   }
 </style>

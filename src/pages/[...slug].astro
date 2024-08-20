@@ -1,17 +1,20 @@
 ---
-import { getCollection } from 'astro:content';
-import MarkdownPostLayout from '../layouts/MarkdownPostLayout.astro';
+import { getCollection } from 'astro:content'
+import MarkdownPostLayout from '../layouts/MarkdownPostLayout.astro'
+import MdxPicture from '../components/MdxPicture.astro'
 // 1. コレクションエントリーごとに新しいパスを生成
 export async function getStaticPaths() {
-  const blogEntries = await getCollection('blog');
-  return blogEntries.map(entry => ({
-    params: { slug: entry.slug }, props: { entry },
-  }));
+  const blogEntries = await getCollection('blog')
+  return blogEntries.map((entry) => ({
+    params: { slug: entry.slug },
+    props: { entry },
+  }))
 }
 // 2. テンプレートでは、プロパティからエントリーを直接取得できる
-const { entry } = Astro.props;
-const { Content } = await entry.render();
+const { entry } = Astro.props
+const { Content } = await entry.render()
 ---
+
 <MarkdownPostLayout frontmatter={entry.data}>
-  <Content />
+  <Content components={{ img: MdxPicture }} />
 </MarkdownPostLayout>

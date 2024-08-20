@@ -7,5 +7,19 @@
   "calendar",
   "templater-obsidian",
   "obsidian-git",
-  "obsidian-livesync"
+  "obsidian-livesync",
+  "dataview",
+  "obsidian-tasks-plugin",
+  "tag-wrangler",
+  "omnisearch",
+  "obsidian-plugin-toc",
+  "obsidian-tagfolder",
+  "auto-card-link",
+  "obsidian-link-embed",
+  "obsidian-linter",
+  "obsidian-auto-link-title",
+  "obsidian-excalidraw-plugin",
+  "obsidian-paste-image-rename",
+  "image-converter",
+  "mdx-as-md-obsidian"
 ]

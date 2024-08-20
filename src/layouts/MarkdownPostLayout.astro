@@ -1,30 +1,23 @@
 ---
-import BaseLayout from './BaseLayout.astro';
-import { Image } from 'astro:assets';
-import thumbnail from '/src/assets/images/noimage.png';
-
-const { frontmatter } = Astro.props;
+import BaseLayout from './BaseLayout.astro'
+import '../styles/remark-link-card.css'
+import { Image } from 'astro:assets'
+import noImage from '/src/assets/images/noimage.png'
+const { frontmatter } = Astro.props
+const blogImageSrc = 'src/content/blog/images/'
 ---
+
 <BaseLayout pageTitle={frontmatter.title}>
-<p>著者: {frontmatter.author}</p>
-<p><em>{frontmatter.description}</em></p>
-<p>投稿日：{frontmatter.pubDate.toLocaleDateString()}</p>
-<Image src={thumbnail} alt={frontmatter.title}/>
-{frontmatter.image ? 
-<img src={`/src/assets/images/${frontmatter.image}`} width="300" alt={frontmatter.title} /> : <Image src={thumbnail} alt={frontmatter.title}/>}
-  <div class="tags">
-    {frontmatter.tags.map((tag) => (
-      <p class="tag"><a href={`/tags/${tag}`}>{tag}</a></p>
-    ))}
-  </div>
+  <p>著者: {frontmatter.author}</p>
+  <p><em>{frontmatter.description}</em></p>
+  <p>投稿日：{frontmatter.pubDate.toLocaleDateString()}</p>
+  
 <slot />
-
-
 </BaseLayout>
 
-<style>
+<style lang="scss">
   a {
-    color: #00539F;
+    color: #00539f;
   }
 
   .tags {
@@ -35,9 +28,9 @@ const { frontmatter } = Astro.props;
   .tag {
     margin: 0.25em;
     border: dotted 1px #a1a1a1;
-    border-radius: .5em;
-    padding: .5em 1em;
+    border-radius: 0.5em;
+    padding: 0.5em 1em;
     font-size: 1.15em;
-    background-color: #F8FCFD;
+    background-color: #f8fcfd;
   }
 </style>

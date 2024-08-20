@@ -1,4 +1,9 @@
 {
   "promptDelete": false,
-  "alwaysUpdateLinks": true
+  "alwaysUpdateLinks": true,
+  "strictLineBreaks": false,
+  "propertiesInDocument": "visible",
+  "useMarkdownLinks": true,
+  "attachmentFolderPath": "images",
+  "newLinkFormat": "relative"
 }

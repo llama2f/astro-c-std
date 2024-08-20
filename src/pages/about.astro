@@ -1,66 +1,85 @@
 ---
-import '../styles/global.css';
-import BaseLayout from '../layouts/BaseLayout.astro';
-import { Breadcrumbs } from "astro-breadcrumbs";
-const pageTitle = "About c-studio";
-const pubDate= new Date("2023-03-25").toLocaleDateString()
-const upDate=new Date("2023-08-05").toLocaleDateString()
+import '../styles/global.css'
+import BaseLayout from '../layouts/BaseLayout.astro'
+import { Breadcrumbs } from 'astro-breadcrumbs'
+const pageTitle = 'About c-studio'
+const pubDate = new Date('2023-03-25').toLocaleDateString()
+const upDate = new Date('2023-08-05').toLocaleDateString()
 
-const works=["WEBデザイン、コーディング、制作全般","事業用管理プログラム等制作","イラスト制作"]
+const works = [
+  'WEBデザイン、コーディング、制作全般',
+  '事業用管理プログラム等制作',
+  'イラスト制作',
+]
 
-const skills = ["WEBデザイン","WEBライティング","HTML", "CSS","SCSS", "JavaScript", "Wordpress", "Astro", "イラストレーション"];
+const skills = [
+  'WEBデザイン',
+  'WEBライティング',
+  'HTML',
+  'CSS',
+  'SCSS',
+  'JavaScript',
+  'Wordpress',
+  'Astro',
+  'イラストレーション',
+]
 
-const softs=[ "VSCode","Figma","Affinity Desinger", "Affinity Photo", "ClipStudio"]
-
-
+const softs = [
+  'VSCode',
+  'Figma',
+  'Affinity Desinger',
+  'Affinity Photo',
+  'ClipStudio',
+]
 ---
+
 <BaseLayout pageTitle={pageTitle} pubDate={pubDate} upDate={upDate}>
-  <Breadcrumbs/>
+  <Breadcrumbs />
 
-<div class="contentWrapper">
-  
-  <div class='aboutText'><p>
-    宮城県在住のWEB屋、イラストレーターです。ものづくり全般、アクアリウム、魚や爬虫類両生類好きです。DIYで自宅をいじったりしています。
-  </p>
-  
-  <p>
-    イラストはSNS用のアイコンから企業様のWEBイラスト等多岐にわたり制作しております。ポップで可愛らしい絵柄を得意としています。</p>
-  
-   <p>WEBサイト構築については、地元企業様などによくご利用いただいております。お客様ご自身で更新しやすいCMS（WordPressなど）を利用したタイプや、軽量で安全性の高いタイプ、ランディングページなどもお作りできます。ちなみにこのサイトは<a href="https://astro.build">Astro</a>というフレームワークで作成しています。
-  </p>
-  <p>ご希望承りますので、ぜひお気軽にご相談ください。</p></div>
+  <div class="contentWrapper">
+    <div class="aboutText">
+      <p>
+        宮城県在住のWEB屋、イラストレーターです。ものづくり全般、アクアリウム、魚や爬虫類両生類好きです。DIYで自宅をいじったりしています。
+      </p>
+
+      <p>
+        イラストはSNS用のアイコンから企業様のWEBイラスト等多岐にわたり制作しております。ポップで可愛らしい絵柄を得意としています。
+      </p>
+
+      <p>
+        WEBサイト構築については、地元企業様などによくご利用いただいております。お客様ご自身で更新しやすいCMS（WordPressなど）を利用したタイプや、軽量で安全性の高いタイプ、ランディングページなどもお作りできます。ちなみにこのサイトは<a
+          href="https://astro.build">Astro</a
+        >というフレームワークで作成しています。
+      </p>
+      <p>ご希望承りますので、ぜひお気軽にご相談ください。</p>
+    </div>
     <h2>お仕事</h2>
-  <ul>
-    {works.map((work) => <li class="work">{work}</li>)}
-  </ul>
-  
-  
-  <h2>できること</h2>
-  <ul>
-    {skills.map((skill) => <li class="skill">{skill}</li>)}
-  </ul>
-  
-  <h2>使っているソフト</h2>
-  <ul>
-    {softs.map((soft) => <li class="soft">{soft}</li>)}
-  </ul>
-  <h2>実績</h2>
-  <ul>
-    <li>株式会社ビルドクラスタ様：WEBサイト制作（デザイン・コーディング）</li>
-  </ul>
-</div>
+    <ul>
+      {works.map((work) => <li class="work">{work}</li>)}
+    </ul>
 
+    <h2>できること</h2>
+    <ul>
+      {skills.map((skill) => <li class="skill">{skill}</li>)}
+    </ul>
+
+    <h2>使っているソフト</h2>
+    <ul>
+      {softs.map((soft) => <li class="soft">{soft}</li>)}
+    </ul>
+    <h2>実績</h2>
+    <ul>
+      <li>株式会社ビルドクラスタ様：WEBサイト制作（デザイン・コーディング）</li>
+    </ul>
+  </div>
 </BaseLayout>
 
 <style lang="scss">
-  
-.contentWrapper {
-	margin: 0 $contentWrapperMg;
-}
-  .aboutText{
-    p{
-      
+  .contentWrapper {
+    margin: 0 $contentWrapperMg;
+  }
+  .aboutText {
+    p {
     }
   }
-
 </style>

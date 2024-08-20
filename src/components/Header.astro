@@ -3,11 +3,20 @@ import Navigation from './Navigation.astro'
 import Humburger from './Humburger.astro'
 import ThemeIcon from './ThemeIcon.astro'
 ---
-<header>
-<nav>
-  <Humburger/>
-  <ThemeIcon/>
-<Navigation />
-</nav>
 
+<header>
+  <nav>
+    <Humburger />
+    <ThemeIcon />
+    <Navigation />
+  </nav>
 </header>
+
+<style lang="scss">
+  header {
+    background-color: $baseTextCol;
+    a & a:visited {
+      color: $bgCol1;
+    }
+  }
+</style>
