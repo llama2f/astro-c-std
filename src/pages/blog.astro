@@ -4,21 +4,23 @@ import '../styles/global.css'
 import { getCollection } from 'astro:content'
 import BaseLayout from '../layouts/BaseLayout.astro'
 import BlogPost from '../components/BlogPost.astro'
+import Tags from '@components/Tags.astro'
 
 // const allPosts = await Astro.glob('../pages/posts/*.md');
 const blogPosts = await getCollection('blog')
-
 const pageTitle = 'Blog'
+
+
 ---
 
 <BaseLayout pageTitle={pageTitle} >
-  <p>ここには、私がAstroを学んでいく旅の様子を投稿します。</p>
-
+  <h2>Blog List</h2>
   <ul>
     {
       blogPosts.map((post) => (
-        <BlogPost url={post.slug} title={post.data.title} />
+      <BlogPost url={post.slug} title={post.data.title} tags={post.data.tags} />
       ))
     }
   </ul>
+  <Tags />
 </BaseLayout>

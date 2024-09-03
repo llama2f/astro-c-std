@@ -5,7 +5,7 @@ categories:
   - diy
 tags:
   - DIY
-  - Strage/Niche
+  - Strage
 image: ./images/niche_thumb.jpg
 isDraft: false
 ---

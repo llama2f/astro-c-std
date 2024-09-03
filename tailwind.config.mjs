@@ -54,6 +54,7 @@ export default {
         'YuGothic',
         'Yu Gothic',
       ],
+      fontawesome: ['Font Awesome 5 Free'],
     },
   },
   plugins: [require('@tailwindcss/typography')],

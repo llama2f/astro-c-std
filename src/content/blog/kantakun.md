@@ -1,7 +1,7 @@
 ---
 title: 乾太くん
 tags:
-  - Electronics/Dryer
+  - Electronics
 categories:
   - electronics
 pubDate: 2024-08-14

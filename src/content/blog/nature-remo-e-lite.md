@@ -4,7 +4,7 @@ pubDate: 2023-07-27
 categories:
   - electronics
 tags:
-  - Electronics/SmartHome
+  - Electronics-SmartHome
   - Nature
 image: ./images/natureremoelite_thumb.jpg
 isDraft: false

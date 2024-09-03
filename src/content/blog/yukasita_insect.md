@@ -6,7 +6,6 @@ categories:
 tags:
   - DIY
   - UnderFloor
-  - Insects
 image: ./images/yukasita_insect_thumb-1.jpg
 isDraft: false
 ---

@@ -1,8 +1,8 @@
 ---
-const menuItemStyle = 'text-lg md:text-xl text-slate-800 hover:text-slate-100 transition-colors duration-300'
+const menuItemStyle = 'text-lg text-slate-800 hover:text-slate-100 transition-colors duration-300 mb-2 md:mb-0 inline-block '
 ---
 
-<div id="navLinks" class="hidden fixed justify-start md:justify-center flex-col md:flex-row md:gap-8 items-start gap-2 z-10 bg-stone-300/[.8] min-h-full right-0 top-0 pt-20  px-8 md:flex md:w-full md:relative md:min-h-fit md:p-4">
+<div id="navLinks" class="fixed flex justify-start md:justify-center flex-col md:flex-row md:gap-8 items-start gap-2 z-10 bg-stone-300/[.8] translate-x-full duration-200 min-h-full right-0 top-0 pt-20  px-8 md:flex md:w-full md:relative md:min-h-fit md:p-4 md:translate-x-0">
   <a href="/" class={menuItemStyle}>Home</a>
   <a href="/about" class={menuItemStyle}>About</a>
   <a href="/blog" class={menuItemStyle}>Blog</a>

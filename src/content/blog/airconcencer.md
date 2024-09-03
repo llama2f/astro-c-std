@@ -4,7 +4,7 @@ pubDate: 2023-08-06
 categories:
   - electronics
 tags:
-  - Electronics/Aircon
+  - Electronics-Aircon
   - DIY
   - Temperature-Humidity
 image: ./images/20230806_124213_0000.jpg

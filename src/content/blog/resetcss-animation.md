@@ -2,7 +2,7 @@
 title: リセットCSSが原因でアニメーションが効かなかった
 tags:
   - Web
-  - Web/CSS
+  - CSS
 categories:
   - web
 pubDate: 2024-08-27

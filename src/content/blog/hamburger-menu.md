@@ -1,13 +1,13 @@
 ---
 title: 基本のハンバーガーメニューのつくりかた
 tags:
-  - Web/menu
+  - Web
 categories:
   - menu
 pubDate: 2024-08-28
 upDate: 2024-08-30
 image: noimage.png
-description:
+description: 
 author: caori
 isDraft: false
 cDate: 2024-08-27

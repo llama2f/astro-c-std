@@ -31,7 +31,7 @@ const { pageTitle, pubDate, upDate} = Astro.props
   <body class="font-body text-gray-600">
     
     <Header />
-    <main class="pt-40">
+    <main>
       
     <Breadcrumbs>      
   <svg
@@ -48,9 +48,9 @@ const { pageTitle, pubDate, upDate} = Astro.props
     ><polyline points="9 18 15 12 9 6"></polyline>
   </svg>
 </Breadcrumbs>
-      <div class="articleWrapper">
-        <h1 class="text-2xl font-bold text-center p-6">{pageTitle}</h1>
-        <div class="contentWrapper prose prose-base prose-h2:text-cyan-800 prose-h2:text-3xl p-6 mx-auto max-w-screen-sm">
+      <div class="text-slate-400 articleWrapper flex items-center flex-col">
+        <h1 class="text-2xl font-bold text-center p-6 m-6 border max-w-screen-sm tracking-wide">{pageTitle}</h1>
+        <div class="contentWrapper prose prose-base prose-h2:text-cyan-800 prose-h2:text-3xl prose-h3:text-cyan-700 prose-h4:text-cyan-700 p-6 mx-auto max-w-screen-sm">
           <slot />
         </div>
       </div>
@@ -72,14 +72,3 @@ const { pageTitle, pubDate, upDate} = Astro.props
     }}
   />
 </html>
-
-<style lang="scss">
-  body {
-   // color: $baseTextCol;
-   // background-color: $bgCol1;
-  }
-
-  .articleWrapper {
-    line-height: 1.6;
-  }
-</style>

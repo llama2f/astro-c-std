@@ -4,7 +4,7 @@ pubDate: 2023-07-13
 categories:
   - electronics
 tags:
-  - Electronics/SmartHome
+  - Electronics-SmartHome
   - Sesami
   - Entrance
 image: ./images/sesami_thumb.jpg

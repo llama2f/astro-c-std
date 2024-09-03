@@ -4,7 +4,7 @@ pubDate: 2023-08-03
 categories:
   - life
 tags:
-  - Life/Disease
+  - Life
 image: ./images/thumb-hellpangina.jpg
 isDraft: false
 ---

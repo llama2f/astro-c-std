@@ -1,5 +1,32 @@
 ---
-const { title, url } = Astro.props
+const { title, url ,tags } = Astro.props
+
+    function getIconClass(tags) {
+  if (tags.includes('Web')) {
+    return 'fa-globe'; // アイコンを表示するためのクラス名
+  } else if (tags.includes('UnderFloor')) {
+    return 'fa-house';
+  }
+   else if (tags.includes('MyHome')) {
+    return 'fa-house';
+  } else if (tags.includes('Electronics')) {
+    return 'fa-bolt';
+  }
+   else if (tags.includes('Electronics-SmartHome')) {
+    return 'fa-bolt';
+  }
+   else if (tags.includes('Life')) {
+    return 'fa-heart';
+  }
+  else if (tags.includes('DIY')) {
+    return 'fa-wrench';
+  } else if (tags.includes('Blog')) {
+    return 'fa-book';
+  } else {
+    return 'fa-ellipsis'; // デフォルトのアイコン
+  }
+}
 ---
 
-<li><a href={url}>{title}</a></li>
+
+<li class="mb-4"><i class=`fas ${getIconClass(tags)}`></i><a class="block leading-5" href={url}>{title}</a>{ tags && tags.map((tag) => (<a class="tag text-xs text-slate-300 leading-none inline-block border rounded mx-1 p-1 no-underline" href={`/tags/${tag}`}>{tag}</a>)) }</li>
