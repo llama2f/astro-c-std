@@ -6,8 +6,6 @@ import wikiLinkPlugin from '@portaljs/remark-wiki-link'
 import { defineConfig } from 'astro/config'
 import remarkLinkCard from 'remark-link-card'
 
-const pageUrlPathPrefix = 'blog/'
-
 // https://astro.build/config
 export default defineConfig({
   site: 'https://c-std.com',
@@ -23,20 +21,12 @@ export default defineConfig({
   },
   markdown: {
     remarkPlugins: [
+      wikiLinkPlugin,
       [
         remarkLinkCard,
         {
           cache: true,
           shortenUrl: true,
-        },
-      ],
-      [
-        wikiLinkPlugin,
-        {
-          pathFormat: 'obsidian-absolute',
-          // generate url of the linked page.
-          // here `slug` would be "Page Name" for wiki link [[Page Name]].
-          wikiLinkResolver: (slug) => [pageUrlPathPrefix + slug],
         },
       ],
     ],

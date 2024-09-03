@@ -4,10 +4,10 @@ import Humburger from './Humburger.astro'
 import ThemeIcon from './ThemeIcon.astro'
 ---
 
-<header>
-  <nav>
-    <Humburger />
+<header class="min-h-50 w-full min-h-20 flex justify-center fixed">
+  <nav class="w-full mt-8">
     <ThemeIcon />
+    <Humburger />
     <Navigation />
   </nav>
 </header>
@@ -15,6 +15,7 @@ import ThemeIcon from './ThemeIcon.astro'
 <style lang="scss">
   header {
     background-color: $baseTextCol;
+
     a & a:visited {
       color: $bgCol1;
     }

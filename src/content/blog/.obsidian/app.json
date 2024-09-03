@@ -3,7 +3,8 @@
   "alwaysUpdateLinks": true,
   "strictLineBreaks": false,
   "propertiesInDocument": "visible",
-  "useMarkdownLinks": true,
+  "useMarkdownLinks": false,
   "attachmentFolderPath": "images",
-  "newLinkFormat": "relative"
+  "newLinkFormat": "absolute",
+  "showLineNumber": true
 }

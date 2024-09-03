@@ -21,5 +21,6 @@
   "obsidian-excalidraw-plugin",
   "obsidian-paste-image-rename",
   "image-converter",
-  "mdx-as-md-obsidian"
+  "mdx-as-md-obsidian",
+  "obsidian-link-converter"
 ]

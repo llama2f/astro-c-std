@@ -2,10 +2,14 @@
 import { Schema } from 'astro-seo-schema'
 import 'modern-css-reset'
 import '../styles/global.css'
+import '../styles/hamburger-menu.css'
 import Header from '../components/Header.astro'
 import Footer from '../components/Footer.astro'
+import { Breadcrumbs } from "astro-breadcrumbs";
+import "astro-breadcrumbs/breadcrumbs.css";
+import "../styles/breadcrumbs.scss"
 
-const { pageTitle, pubDate, upDate } = Astro.props
+const { pageTitle, pubDate, upDate} = Astro.props
 ---
 
 <html lang="ja">
@@ -16,18 +20,43 @@ const { pageTitle, pubDate, upDate } = Astro.props
     <meta name="generator" content="{Astro.generator}" />
     <title>{pageTitle}</title>
     <link rel="sitemap" href="/sitemap-index.xml" />
+     <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
+      integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
   </head>
-  <Header />
-
-  <main>
-    <div class="articleWrapper">
-      <h1>{pageTitle}</h1>
-      <div class="contentWrapper">
-        <slot />
+  <body class="font-body text-gray-600">
+    
+    <Header />
+    <main class="pt-40">
+      
+    <Breadcrumbs>      
+  <svg
+    slot="separator"
+    xmlns="http://www.w3.org/2000/svg"
+    width="24"
+    height="24"
+    viewBox="0 0 24 24"
+    fill="none"
+    stroke="currentColor"
+    stroke-width="2"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+    ><polyline points="9 18 15 12 9 6"></polyline>
+  </svg>
+</Breadcrumbs>
+      <div class="articleWrapper">
+        <h1 class="text-2xl font-bold text-center p-6">{pageTitle}</h1>
+        <div class="contentWrapper prose prose-base prose-h2:text-cyan-800 prose-h2:text-3xl p-6 mx-auto max-w-screen-sm">
+          <slot />
+        </div>
       </div>
-    </div>
-  </main>
-  <Footer pubDate={pubDate} upDate={upDate} />
+    </main>
+    <Footer pubDate={pubDate} upDate={upDate} />
+  </body>
   <script>
     import '../scripts/menu.js'
     import '../scripts/link.js'
@@ -46,13 +75,8 @@ const { pageTitle, pubDate, upDate } = Astro.props
 
 <style lang="scss">
   body {
-    background-color: $bgCol1;
-    color: $baseTextCol;
-  }
-
-  .contentWrapper {
-    max-width: 600px;
-    margin: 0 auto;
+   // color: $baseTextCol;
+   // background-color: $bgCol1;
   }
 
   .articleWrapper {

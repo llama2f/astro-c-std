@@ -1,21 +1,13 @@
 ---
+const menuItemStyle = 'text-lg md:text-xl text-slate-800 hover:text-slate-100 transition-colors duration-300'
 ---
 
-<div class="nav-links">
-  <a href="/">Home</a>
-  <a href="/about">About</a>
-  <a href="/blog">Blog</a>
-  <a href="/tags/">Tags</a>
-  <a href="/contact/">Contact</a>
-  <a href="/privacy-policy/">Privacy Policy</a>
+<div id="navLinks" class="hidden fixed justify-start md:justify-center flex-col md:flex-row md:gap-8 items-start gap-2 z-10 bg-stone-300/[.8] min-h-full right-0 top-0 pt-20  px-8 md:flex md:w-full md:relative md:min-h-fit md:p-4">
+  <a href="/" class={menuItemStyle}>Home</a>
+  <a href="/about" class={menuItemStyle}>About</a>
+  <a href="/blog" class={menuItemStyle}>Blog</a>
+  <a href="/tags/" class={menuItemStyle}>Tags</a>
+  <a href="/contact/" class={menuItemStyle}>Contact</a>
+  <a href="/privacy-policy/" class={menuItemStyle}>Privacy Policy</a>
 </div>
 
-<style lang="scss">
-  .nav-links {
-    display: flex;
-    justify-content: center;
-    a {
-      color: $bgCol1;
-    }
-  }
-</style>

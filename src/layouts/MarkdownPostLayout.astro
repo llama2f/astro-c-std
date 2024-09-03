@@ -7,12 +7,14 @@ const { frontmatter } = Astro.props
 const blogImageSrc = 'src/content/blog/images/'
 ---
 
-<BaseLayout pageTitle={frontmatter.title}>
+<BaseLayout pageTitle={frontmatter.title} currentPage={frontmatter.title}>
   <p>著者: {frontmatter.author}</p>
   <p><em>{frontmatter.description}</em></p>
   <p>投稿日：{frontmatter.pubDate.toLocaleDateString()}</p>
   
-<slot />
+<div class="slot md">
+  <slot />
+</div>
 </BaseLayout>
 
 <style lang="scss">
@@ -26,11 +28,11 @@ const blogImageSrc = 'src/content/blog/images/'
   }
 
   .tag {
-    margin: 0.25em;
-    border: dotted 1px #a1a1a1;
-    border-radius: 0.5em;
     padding: 0.5em 1em;
+    margin: 0.25em;
     font-size: 1.15em;
     background-color: #f8fcfd;
+    border: dotted 1px #a1a1a1;
+    border-radius: 0.5em;
   }
 </style>
