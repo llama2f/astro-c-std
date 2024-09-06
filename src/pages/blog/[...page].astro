@@ -1,0 +1,43 @@
+---
+import { getCollection } from 'astro:content';
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import BlogPost from '@components/BlogPost.astro';
+import Tags from '@components/Tags.astro'
+
+
+//ページ分割生成
+export async function getStaticPaths({ paginate }) {
+  const pages = await getCollection('blog', ({ data }) => {
+  return data.isDraft !== true;
+});
+  return paginate(pages, { pageSize: 15 });
+}
+
+//全記事数
+const allblogPosts =await getCollection('blog', ({ data }) => {
+  return data.isDraft !== true;
+});
+const allpagenum = Object.keys(allblogPosts).length
+
+// All paginated data is passed on the "page" prop
+const { page } = Astro.props;
+const { prev, next} = page.url;
+
+---
+
+<BaseLayout pageTitle=`BlogList ${page.currentPage}`>
+  <ul class="pl-0">
+    {page.data.map((post) => 
+        <BlogPost url={post.slug} title={post.data.title} tags={post.data.tags} pubDate={post.data.pubDate} />    
+    )}
+  </ul>
+
+  <p>記事数：{allpagenum}</p>
+   <p>Posts {page.start + 1} to {page.end + 1}</p>
+  <p>{page.size} posts per page</p>
+  <p>Page {page.currentPage} of {page.lastPage}</p>
+  <p><a href={next}>Next Page</a></p>
+  <p><a href={prev}>Previous Page</a></p>
+
+    <Tags />
+</BaseLayout>

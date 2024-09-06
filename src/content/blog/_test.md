@@ -1,0 +1,1 @@
+obsidian://advanced-uri?vault=newblog&commandid=quickadd%253Achoice%253Aed9add97-967b-47b5-a18e-d0d8541c8ba5

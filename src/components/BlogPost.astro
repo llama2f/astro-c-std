@@ -1,5 +1,5 @@
 ---
-const { title, url ,tags } = Astro.props
+const { title, url ,tags,pubDate } = Astro.props
 
     function getIconClass(tags) {
   if (tags.includes('Web')) {
@@ -29,4 +29,8 @@ const { title, url ,tags } = Astro.props
 ---
 
 
-<li class="mb-4"><i class=`fas ${getIconClass(tags)}`></i><a class="block leading-5" href={url}>{title}</a>{ tags && tags.map((tag) => (<a class="tag text-xs text-slate-300 leading-none inline-block border rounded mx-1 p-1 no-underline" href={`/tags/${tag}`}>{tag}</a>)) }</li>
+<li class="p-2 list-none odd:bg-slate-100"><i class=`fas ${getIconClass(tags)} inline-block mr-3`></i><a class="leading-5" href={url}>{title}</a><div class="postInfo flex justify-end">
+  <div class="tags">{ tags && tags.sort().map((tag) => (<a class="tag text-xs text-slate-400 leading-none inline-block border rounded mx-1 p-1 no-underline" href={`/tags/${tag}`}>{tag}</a>)) }</div>
+  <div class=" text-slate-400 flex no-wrap items-center"><i class=`fas fa-clock inline-block mr-1 ml-3`></i>{pubDate.toLocaleDateString()}</div>
+</div>
+</li>

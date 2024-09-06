@@ -5,7 +5,7 @@ const allPosts = await getCollection('blog')
 const tags = [...new Set(allPosts.map((post) => post.data.tags).flat())]
 ---
 <h2>Tags</h2>
-  <ul class="tags list-none">
+  <ul class="tags list-none pl-0">
     {
       tags.map((tag) => (
         <li class="tag text-sm inline-block border rounded mx-2 p-1">

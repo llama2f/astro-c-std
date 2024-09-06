@@ -8,17 +8,18 @@ import Tags from '@components/Tags.astro'
 
 // const allPosts = await Astro.glob('../pages/posts/*.md');
 const blogPosts = await getCollection('blog')
-const pageTitle = 'Blog'
 
+blogPosts.sort((a, b) => new Date(b.data.pubDate) - new Date(a.data.pubDate));
+const pageTitle = 'Blog'
 
 ---
 
 <BaseLayout pageTitle={pageTitle} >
   <h2>Blog List</h2>
-  <ul>
+  <ul class="pl-0">
     {
       blogPosts.map((post) => (
-      <BlogPost url={post.slug} title={post.data.title} tags={post.data.tags} />
+      <BlogPost url={post.slug} title={post.data.title} tags={post.data.tags} pubDate={post.data.pubDate} />
       ))
     }
   </ul>
