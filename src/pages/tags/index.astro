@@ -11,7 +11,7 @@ const pageTitle = 'Tags'
     {
       tags.map((tag) => (
         <p class="m-0 [&:not(:first-child)]:mt-0">
-          <a class="border rounded no-underline py-1 px-3 hover:bg-slate-200" href={`/tags/${tag}`}>{tag}</a>
+          <a class="rounded border px-3 py-1 no-underline hover:bg-slate-200" href={`/tags/${tag}`}>{tag}</a>
         </p>
       ))
     }

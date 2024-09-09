@@ -1,5 +1,5 @@
 ---
-const { title, url ,tags,pubDate } = Astro.props
+const { title, url ,tags , pubDate } = Astro.props
 
     function getIconClass(tags) {
   if (tags.includes('Web')) {
@@ -26,11 +26,13 @@ const { title, url ,tags,pubDate } = Astro.props
     return 'fa-ellipsis'; // デフォルトのアイコン
   }
 }
+
+
 ---
 
 
-<li class="p-2 list-none odd:bg-slate-100"><i class=`fas ${getIconClass(tags)} inline-block mr-3`></i><a class="leading-5" href={url}>{title}</a><div class="postInfo flex justify-end">
-  <div class="tags">{ tags && tags.sort().map((tag) => (<a class="tag text-xs text-slate-400 leading-none inline-block border rounded mx-1 p-1 no-underline" href={`/tags/${tag}`}>{tag}</a>)) }</div>
-  <div class=" text-slate-400 flex no-wrap items-center"><i class=`fas fa-clock inline-block mr-1 ml-3`></i>{pubDate.toLocaleDateString()}</div>
+<li class="not-prose list-none p-2 odd:bg-slate-100 dark:odd:bg-slate-900"><i class=`fas ${getIconClass(tags)} inline-block mr-3`></i><a class="leading-5 hover:text-blue-600 dark:text-slate-300" href={`/${url}`}>{title}</a><div class="postInfo flex justify-end">
+  <div class="tags">{ tags && tags.sort().map((tag) => (<a class="mx-1 inline-block rounded border p-1 text-xs leading-none text-slate-400 no-underline hover:bg-slate-400 hover:text-slate-50 dark:border-slate-600" href={`/tags/${tag}`}>{tag}</a>)) }</div>
+  <div class=" no-wrap flex items-center text-slate-400"><i class=`fa-regular fa-clock inline-block mr-1 ml-3`></i><span class="text-xs">{pubDate.toLocaleDateString()}</span></div>
 </div>
 </li>

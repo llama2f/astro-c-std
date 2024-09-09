@@ -5,7 +5,7 @@ import Copyright from './Copyright.astro'
 const { pubDate, upDate } = Astro.props
 ---
 
-<footer>
+<footer class="bg-slate-600">
   <div>
     <p>
       ご依頼は<a href="https://twitter.com/caori_st">Twitter</a>のDMや<a
@@ -21,21 +21,3 @@ const { pubDate, upDate } = Astro.props
   <Dates pubDate={pubDate} upDate={upDate} />
   <Copyright publishedYear="2023" owner="caori" />
 </footer>
-
-<style lang="scss">
-  footer {
-    color: $bgCol1;
-    background-color: $footerBgCol;
-    margin-top: 5rem;
-    padding: 1rem $footerPd;
-
-    a {
-      color: $bgCol1;
-    }
-  }
-  .social {
-    display: flex;
-    gap: 1rem;
-    margin-top: 2rem;
-  }
-</style>

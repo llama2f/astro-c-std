@@ -5,11 +5,11 @@ const allPosts = await getCollection('blog')
 const tags = [...new Set(allPosts.map((post) => post.data.tags).flat())]
 ---
 <h2>Tags</h2>
-  <ul class="tags list-none pl-0">
+  <ul class="tags not-prose list-none pl-0">
     {
       tags.map((tag) => (
-        <li class="tag text-sm inline-block border rounded mx-2 p-1">
-          <a href={`/tags/${tag}`} class="no-underline">{tag}</a>
+        <li class="tag m-2 inline-block rounded border p-1 text-sm hover:bg-slate-400 dark:border-slate-600">
+          <a href={`/tags/${tag}`} class="no-underline  hover:text-slate-50 dark:text-slate-400">{tag}</a>
         </li>
       ))
     }

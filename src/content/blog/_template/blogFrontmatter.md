@@ -1,7 +1,7 @@
 ---
 title: <% tp.file.title %>
 tags:
-  - ブログ
+  - blog
 categories:
   - diy
 pubDate: <% tp.date.now() %>

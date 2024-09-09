@@ -1,13 +1,13 @@
 ---
 title: 自作の敷居を跨げず分割キーボードFILCO Majestouch Xacro M10SPを買った
 tags:
-  - ブログ
+  - blog
 categories:
   - electronics
 pubDate: 2024-08-18
-upDate: ''
+upDate: ""
 image: noimage.png
-description:
+description: 
 author: caori
 isDraft: true
 cDate: 2024-08-13

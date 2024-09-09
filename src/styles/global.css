@@ -1,12 +1,3 @@
-html.dark {
-  color: #fff;
-  background-color: #0d0950;
-}
-
-.dark .nav-links a {
-  color: #fff;
-}
-
 /* 基本のスタイル */
 
 p:not(:first-of-type) {
@@ -19,6 +10,10 @@ img {
 
 a {
   color: dimgray;
+}
+
+a:hover {
+  color: rgb(37 99 235 / 100%);
 }
 
 pre {

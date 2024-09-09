@@ -2,7 +2,8 @@
 import { getCollection } from 'astro:content';
 import BaseLayout from '@/layouts/BaseLayout.astro';
 import BlogPost from '@components/BlogPost.astro';
-import Tags from '@components/Tags.astro'
+import Tags from '@components/Tags.astro';
+import PageNavi from '@components/PageNavi.astro'
 
 
 //ページ分割生成
@@ -21,7 +22,6 @@ const allpagenum = Object.keys(allblogPosts).length
 
 // All paginated data is passed on the "page" prop
 const { page } = Astro.props;
-const { prev, next} = page.url;
 
 ---
 
@@ -32,12 +32,8 @@ const { prev, next} = page.url;
     )}
   </ul>
 
-  <p>記事数：{allpagenum}</p>
-   <p>Posts {page.start + 1} to {page.end + 1}</p>
-  <p>{page.size} posts per page</p>
-  <p>Page {page.currentPage} of {page.lastPage}</p>
-  <p><a href={next}>Next Page</a></p>
-  <p><a href={prev}>Previous Page</a></p>
+  <PageNavi cur_page={page.currentPage} max_page={page.lastPage} base_url="blog" />
+
 
     <Tags />
 </BaseLayout>

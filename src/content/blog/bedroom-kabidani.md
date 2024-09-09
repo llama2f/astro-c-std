@@ -1,7 +1,7 @@
 ---
 title: ベッド（寝具）周りの衛生保持
 tags:
-  - ブログ
+  - blog
 categories:
   - diy
 pubDate: 2024-09-03
