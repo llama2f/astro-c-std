@@ -9,7 +9,7 @@ img {
 }
 
 a {
-  color: dimgray;
+  text-decoration: underline;
 }
 
 a:hover {

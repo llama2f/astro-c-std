@@ -1,11 +1,7 @@
 ---
 import '../styles/global.css'
 import BaseLayout from '../layouts/BaseLayout.astro'
-import { Breadcrumbs } from 'astro-breadcrumbs'
 const pageTitle = 'About c-studio'
-const pubDate = new Date('2023-03-25').toLocaleDateString()
-const upDate = new Date('2023-08-05').toLocaleDateString()
-
 const works = [
   'WEBデザイン、コーディング、制作全般',
   '事業用管理プログラム等制作',
@@ -33,7 +29,7 @@ const softs = [
 ]
 ---
 
-<BaseLayout pageTitle={pageTitle} pubDate={pubDate} upDate={upDate}> 
+<BaseLayout pageTitle={pageTitle} desc='宮城県在住のWEB屋、イラストレーターです。ものづくり全般、アクアリウム、魚や爬虫類両生類好きです。DIYで自宅をいじったりしています。'> 
   <div class="contentWrapper">
     <div class="aboutText">
       <p>

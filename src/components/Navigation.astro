@@ -1,24 +1,26 @@
 ---
+import ItemList from '@components/module/ItemList.astro'
 
 const navStyle = 'fixed flex space-between max-w-screen-sm mx-auto md:justify-center flex-col md:flex-row items-start z-10 translate-x-full duration-200 min-h-full right-0 top-0 pt-20  px-8 md:flex md:w-full md:relative md:min-h-fit md:py-4 md:px-0 md:translate-x-0 bg-slate-600 dark:bg-slate-900 uppercase'
 
-const menuItemStyle = 'inline-block px-4 text-lg md:text-xl text-slate-100 dark:text-slate-200 hover:text-slate-50 dark:hover:text-slate-600 transition-colors duration-300 mb-2 md:mb-0 inline-block '
+const menuItemStyle = 'px-4 text-lg md:text-xl text-slate-100 dark:text-slate-200 hover:text-slate-500 dark:hover:text-slate-600 transition-colors duration-300 mb-2 md:mb-0 '
 
-const menuDropItemStyle = 'inline-block px-4 text-lg text-slate-300 dark:text-slate-200 hover:text-slate-50 dark:hover:text-slate-600 transition-colors duration-300 mb-2 md:mb-0 inline-block '
+const menuDropItemStyle = 'text-slate-400  dark:text-slate-400 '
 ---
 
 
 
 <div id="navLinks" class={navStyle}>
   <ul class="flex flex-col items-start justify-between gap-5 md:flex-row">
-    <li><a href="/about/" class={menuItemStyle}>About</a></li>
-    <li class="flex flex-col items-center"> 
-      <a href="/blog/" class={menuItemStyle}>Blog</a>
+    <ItemList url="/about/" title="About" style={menuItemStyle} />
+    <ItemList url="/blog/" title="Blog" style={menuItemStyle} >
       <ul>    
-        <li><a href="/tags/" class={menuDropItemStyle}>Tags</a></li>
+        <ItemList url="/tags/" title="Tags" style={ menuItemStyle + menuDropItemStyle} />
       </ul>
-  </li>   
-    <li><a href="/contact/" class={menuItemStyle}>Contact</a></li>
-    <li><a href="/privacy-policy/" class={menuItemStyle}>Privacy Policy</a></li>
+    </ItemList>   
+    
+    <ItemList url="/illust/" title="Illust" style={menuItemStyle} />
+    <ItemList url="/contact/" title="Contact" style={menuItemStyle} />
+    <ItemList url="/privacy-policy/" title="Policy" style={menuItemStyle} />
   </ul>
 </div>

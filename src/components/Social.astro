@@ -1,14 +1,8 @@
 ---
+import CardInner from '@components/module/CardInner.astro'
+import ItemBlock from '@components/module/ItemBlock.astro'
+
 const { platform, username } = Astro.props
 ---
 
-<a href={`https://www.${platform}.com/${username}`}>{platform}</a>
-
-<style>
-  a {
-    padding: 0.5rem 1rem;
-    color: white;
-    background-color: #4c1d95;
-    text-decoration: none;
-  }
-</style>
+<a href={`https://www.${platform}.com/${username}`} class="no-underline"><CardInner><ItemBlock style="bg-slate-100 rounded py-1 text-sm text-slate-600 hover:bg-slate-300">{platform}</ItemBlock></CardInner></a>

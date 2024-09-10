@@ -4,10 +4,5 @@ const today = new Date();
 const currentYear = today.getFullYear().toString();
 ---
 
-<style>
-  p {
-    margin: 0;
-  }
-</style>
 
-<p>© {publishedYear >= currentYear ? publishedYear : `${publishedYear}-${currentYear}`} {owner}</p>
+<p class="text-sm mt-4">© {publishedYear >= currentYear ? publishedYear : `${publishedYear}-${currentYear}`} {owner}</p>

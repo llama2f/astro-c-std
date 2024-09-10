@@ -22,6 +22,24 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@astro-community/astro-embed-link-preview@npm:^0.2.1":
+  version: 0.2.1
+  resolution: "@astro-community/astro-embed-link-preview@npm:0.2.1"
+  dependencies:
+    "@astro-community/astro-embed-utils": "npm:^0.1.1"
+  checksum: 10c0/a759fdd5ddd53c6b0926e74be517eb0de98095275b4f01e4f8d0b1b8f3289f525f727d9dce71632eb053901ae27a79ee076c19b6fad421c2b468ce0038e2c4af
+  languageName: node
+  linkType: hard
+
+"@astro-community/astro-embed-utils@npm:^0.1.1":
+  version: 0.1.3
+  resolution: "@astro-community/astro-embed-utils@npm:0.1.3"
+  dependencies:
+    linkedom: "npm:^0.14.26"
+  checksum: 10c0/8e2e9181a7d0547836dda6d2420fc393509ffdae35ded6637cf42a1d73c099b260d3f0c9ca57c47ad36e388c2622529523ecbf02c57b45bf0009ea3a68a52dd2
+  languageName: node
+  linkType: hard
+
 "@astrojs/compiler@npm:^1.5.0":
   version: 1.8.2
   resolution: "@astrojs/compiler@npm:1.8.2"
@@ -101,6 +119,16 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@astrojs/partytown@npm:^2.1.2":
+  version: 2.1.2
+  resolution: "@astrojs/partytown@npm:2.1.2"
+  dependencies:
+    "@builder.io/partytown": "npm:^0.10.2"
+    mrmime: "npm:^2.0.0"
+  checksum: 10c0/e439669805f1d80fdf926558e6a9630465201a11d228d4babd57f14f44daf1c7469d1d7b7fda2282ec2f150037f53940168bf76f38a93632affb6d50c979af1b
+  languageName: node
+  linkType: hard
+
 "@astrojs/preact@npm:^3.5.1":
   version: 3.5.1
   resolution: "@astrojs/preact@npm:3.5.1"
@@ -173,6 +201,15 @@ __metadata:
     is-wsl: "npm:^3.0.0"
     which-pm-runs: "npm:^1.1.0"
   checksum: 10c0/ed4df1f0763e2fed242805f67f1c50aec0021c31b971ce846355cc981dfce498517f0b24e84de0ec6c426e6f17a2b48f97a2f7b32efa015653646f4dd3c51649
+  languageName: node
+  linkType: hard
+
+"@astrolib/seo@npm:^1.0.0-beta.5":
+  version: 1.0.0-beta.5
+  resolution: "@astrolib/seo@npm:1.0.0-beta.5"
+  peerDependencies:
+    astro: ^1.2.1 || ^2.0.0 || ^3.0.0-beta.0 || ^3.0.0 || ^4.0.0
+  checksum: 10c0/9417c2afc5af37689d53eca1862c57edfc3b81d74ecfdd4674f3ad094c7411c255e3d7016355ca389c33996efdd85307cd81be0ff5b100a6ba7de59871ee7345
   languageName: node
   linkType: hard
 
@@ -425,6 +462,15 @@ __metadata:
     "@babel/helper-validator-identifier": "npm:^7.24.7"
     to-fast-properties: "npm:^2.0.0"
   checksum: 10c0/e489435856be239f8cc1120c90a197e4c2865385121908e5edb7223cfdff3768cba18f489adfe0c26955d9e7bbb1fb10625bc2517505908ceb0af848989bd864
+  languageName: node
+  linkType: hard
+
+"@builder.io/partytown@npm:^0.10.2":
+  version: 0.10.2
+  resolution: "@builder.io/partytown@npm:0.10.2"
+  bin:
+    partytown: bin/partytown.cjs
+  checksum: 10c0/438fcff3e1f2890c2bafb5fe2ffe81e47e797c53e49aa5f413ce333f0aeaf3cf946dc20861c865644a2ab19fbd1e0003f2d73355bbe08d9edbf4188e5aaf22be
   languageName: node
   linkType: hard
 
@@ -4001,6 +4047,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"cssom@npm:^0.5.0":
+  version: 0.5.0
+  resolution: "cssom@npm:0.5.0"
+  checksum: 10c0/8c4121c243baf0678c65dcac29b201ff0067dfecf978de9d5c83b2ff127a8fdefd2bfd54577f5ad8c80ed7d2c8b489ae01c82023545d010c4ecb87683fb403dd
+  languageName: node
+  linkType: hard
+
 "damerau-levenshtein@npm:^1.0.8":
   version: 1.0.8
   resolution: "damerau-levenshtein@npm:1.0.8"
@@ -6451,7 +6504,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"htmlparser2@npm:^8.0.0":
+"htmlparser2@npm:^8.0.0, htmlparser2@npm:^8.0.1":
   version: 8.0.2
   resolution: "htmlparser2@npm:8.0.2"
   dependencies:
@@ -7648,15 +7701,31 @@ __metadata:
   languageName: node
   linkType: hard
 
+"linkedom@npm:^0.14.26":
+  version: 0.14.26
+  resolution: "linkedom@npm:0.14.26"
+  dependencies:
+    css-select: "npm:^5.1.0"
+    cssom: "npm:^0.5.0"
+    html-escaper: "npm:^3.0.3"
+    htmlparser2: "npm:^8.0.1"
+    uhyphen: "npm:^0.2.0"
+  checksum: 10c0/4550b1145a37512488cb4de48dcf80ad5bc54947966a00d04d9558b96fef5ed7552c3d8847707dd1b296bb4527cae75f449ec65db3e528050947423d4333864e
+  languageName: node
+  linkType: hard
+
 "livingpokke@workspace:.":
   version: 0.0.0-use.local
   resolution: "livingpokke@workspace:."
   dependencies:
+    "@astro-community/astro-embed-link-preview": "npm:^0.2.1"
     "@astrojs/mdx": "npm:^3.1.3"
+    "@astrojs/partytown": "npm:^2.1.2"
     "@astrojs/preact": "npm:^3.5.1"
     "@astrojs/rss": "npm:^4.0.7"
     "@astrojs/sitemap": "npm:^3.1.6"
     "@astrojs/tailwind": "npm:^5.1.0"
+    "@astrolib/seo": "npm:^1.0.0-beta.5"
     "@portaljs/remark-wiki-link": "npm:^1.2.0"
     "@tailwindcss/typography": "npm:^0.5.14"
     "@typescript-eslint/parser": "npm:^8.2.0"
@@ -13256,6 +13325,13 @@ __metadata:
     tsc: bin/tsc
     tsserver: bin/tsserver
   checksum: 10c0/73409d7b9196a5a1217b3aaad929bf76294d3ce7d6e9766dd880ece296ee91cf7d7db6b16c6c6c630ee5096eccde726c0ef17c7dfa52b01a243e57ae1f09ef07
+  languageName: node
+  linkType: hard
+
+"uhyphen@npm:^0.2.0":
+  version: 0.2.0
+  resolution: "uhyphen@npm:0.2.0"
+  checksum: 10c0/1e7129fe7a5c86445d1adf04d5c58913b5992e4899ea5553d9ddf6e7ef88af0f807a47f1bf9673b92f705276e5cf1b2c1d3852f1ab5d08ecac3382bcc3a642f9
   languageName: node
   linkType: hard
 

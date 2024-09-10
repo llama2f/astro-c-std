@@ -1,23 +1,26 @@
 ---
 import Social from './Social.astro'
-import Dates from './Dates.astro'
 import Copyright from './Copyright.astro'
-const { pubDate, upDate } = Astro.props
+import WrapperContent from '@components/module/WrapperContent.astro'
+import CardWrapper from '@components/module/CardWrapper.astro'
 ---
 
-<footer class="bg-slate-600">
-  <div>
+<footer class="bg-slate-600 text-slate-200 py-6">
+  <WrapperContent style="text-center">
     <p>
       ご依頼は<a href="https://twitter.com/caori_st">Twitter</a>のDMや<a
         href="https://c-std.com/contact/">問合わせフォーム</a
       >をご利用ください
     </p>
-  </div>
-  <div class="social">
-    <Social platform="twitter" username="caori_st" />
-    <Social platform="youtube" username="caori_st" />
-    <Social platform="github" username="llama2f" />
-  </div>
-  <Dates pubDate={pubDate} upDate={upDate} />
-  <Copyright publishedYear="2023" owner="caori" />
+  </WrapperContent>
+  <WrapperContent>
+    <CardWrapper style="gap-4 justify-center">
+      <Social platform="twitter" username="caori_st" />
+      <Social platform="youtube" username="caori_st" />
+      <Social platform="github" username="llama2f" />
+    </CardWrapper>
+  </WrapperContent>
+  <WrapperContent style="text-center">
+    <Copyright publishedYear="2023" owner="caori" />
+  </WrapperContent>
 </footer>
