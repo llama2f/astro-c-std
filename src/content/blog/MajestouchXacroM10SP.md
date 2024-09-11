@@ -1,5 +1,5 @@
 ---
-title: 自作の敷居を跨げず分割キーボードFILCO Majestouch Xacro M10SPを買った
+title: FILCO Majestouch Xacro M10SPを買った
 tags:
   - blog
 categories:

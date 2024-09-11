@@ -2,8 +2,22 @@
 import '../styles/global.css'
 import BaseLayout from '../layouts/BaseLayout.astro'
 const pageTitle = 'Contact'
+
+const formStyle = 'block border rounded py-1 px-2 '
+const textStyle = 'mb-2 w-3/6'
+const textAreaStyle ='w-5/6 min-h-24 mb-2'
+const btnStyle='bg-blue-700 text-slate-200'
 ---
 
 <BaseLayout pageTitle={pageTitle} desc="'お問い合わせはこちら">
-  お仕事のご依頼、ご相談はじめどのようなことでもお気軽にお問い合わせください。 ※1週間以内に返信を致します。返信ない場合はお手数ですがもう一度送信いただくか、Twitter（@caori_st）などにご連絡ください。
+  <p>お仕事のご依頼、ご相談はじめどのようなことでもお気軽にお問い合わせください。 </p>
+  <p class="text-sm">※1週間以内に返信を致します。返信ない場合はお手数ですがもう一度送信いただくか、Twitter（<a href="https://x.com/caori_st">@caori_st</a>）などにご連絡ください。</p>
+
+  <form action="https://ssgform.com/s/HTh0OhnI1cEc" method="post">
+  <div style="display: none;"><input type="text" name="wana" /></div><!-- name="wana"を見えない状態で設置 -->
+  <input type="text" name="お名前" required="required" placeholder="your name" class={formStyle + textStyle} />
+  <input type="email" name="メールアドレス" required="required" placeholder="email" class={formStyle +textStyle} />
+  <textarea name="お問い合わせ内容" required="required" placeholder="message" class={formStyle + textAreaStyle}></textarea>
+  <button type="submit" class={formStyle + btnStyle}>送信する</button>
+</form>
 </BaseLayout>

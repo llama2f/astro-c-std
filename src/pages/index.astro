@@ -3,18 +3,23 @@ import { Image } from 'astro:assets'
 import frontImage from '../assets/illusts/yagi_comp.png'
 import '../styles/global.css'
 import BaseLayout from '../layouts/BaseLayout.astro'
+import BlogPost from '@components/BlogPost.astro'
+import { getCollection } from 'astro:content'
 
 const pageTitle = 'c-studio'
-
-const {pathname} = Astro.url
 const schema = JSON.stringify({
   '@context': 'https://schema.org',
   '@type': 'WebSite',
   name: import.meta.env.SITE_NAME,
   url: Astro.site,
-  title: 'c-studio',
+  title: pageTitle,
   description: 'Web制作、イラスト制作をおこなっています',
 })
+
+const blogPosts = await getCollection('blog')
+const sortedPosts = blogPosts.sort((a, b) => new Date(b.data.pubDate) - new Date(a.data.pubDate));
+const cuttedPosts = sortedPosts.slice(0,5)
+
 ---
 
 <BaseLayout pageTitle={pageTitle} desc='イラスト、WEB制作などのお仕事をお受けしています。' >
@@ -27,7 +32,15 @@ const schema = JSON.stringify({
   </div>
 
   <h2>Blog</h2>
-
+  <ul class="pl-0">
+    {
+      cuttedPosts.map((post) => (
+      <BlogPost url={post.slug} title={post.data.title} tags={post.data.tags} pubDate={post.data.pubDate} />
+      ))
+    }
+  </ul>
+  <p class="text-right"><a href="blog/">...more posts</a></p>
   <h2>Illust</h2>
   <Image src={frontImage} alt="capricorn" class="topImage" />
+  <p class="text-right"><a href="illust/">...more illusts</a></p>
 </BaseLayout>

@@ -1,13 +1,12 @@
 ---
 import BaseLayout from './BaseLayout.astro'
 import '../styles/remark-link-card.css'
-import { Image } from 'astro:assets'
-import noImage from '/src/assets/images/noimage.png'
+import ProfCard from '@components/ProfCard.astro'
+
 const { frontmatter } = Astro.props
-const blogImageSrc = 'src/content/blog/images/'
 ---
 
-<BaseLayout pageTitle={frontmatter.title} currentPage={frontmatter.title}>
+<BaseLayout pageTitle={frontmatter.title} currentPage={frontmatter.title} schema="blog">
   <p>著者: {frontmatter.author}</p>
   <p><em>{frontmatter.description}</em></p>
   <p>投稿日：{frontmatter.pubDate.toLocaleDateString()}</p>
@@ -15,4 +14,5 @@ const blogImageSrc = 'src/content/blog/images/'
 <div class="slot md">
   <slot />
 </div>
+<ProfCard />
 </BaseLayout>

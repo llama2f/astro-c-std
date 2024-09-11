@@ -6,7 +6,7 @@ tags:
 categories:
   - web
 pubDate: 2024-08-27
-upDate: 2024-08-27
+upDate: 2024-09-11
 image: noimage.png
 description: 
 author: caori
@@ -14,7 +14,7 @@ isDraft: false
 cDate: 2024-08-27
 ---
 
-CSSのtransitionやtransformが効かずに困ったご、リセットCSSが影響していた。
+CSSのtransitionやtransformが効かずに困ったが、リセットCSSが影響していた。
 
 実際はリセットCSS自体が悪いのではなく、OSで余計なアニメーションを表示しない設定にしているとアニメーションしないスタイルで上書きされる仕様。要は自分の環境のせいである。
 
