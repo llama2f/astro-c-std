@@ -1,0 +1,14 @@
+---
+import ItemBlock from '@components/module/ItemBlock.astro'
+const {havePosts} = Astro.props
+
+---
+{
+  havePosts !== 0 ?
+(<ItemBlock>
+  <h2>Related Posts</h2>
+    <ul>
+    <slot />
+  </ul>
+</ItemBlock>) : ''
+}

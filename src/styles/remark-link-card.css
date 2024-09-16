@@ -1,0 +1,103 @@
+/* ブレークポイント: 60ch（Tailwindcss/Typographyのproseのmax-widthを参考に） */
+.rlc-container {
+  --padding-x: 1rem;
+  --padding-y: 0.7rem;
+  --border-radius: calc(0.5rem - 1px);
+
+  display: grid;
+  grid-template-columns: 1fr 116px;
+  gap: 1rem;
+  width: 100%;
+  margin-bottom: 1.25em;
+  text-decoration: none;
+  border: 1px solid var(--tw-prose-hr);
+  border-radius: calc(var(--border-radius) + 1px);
+  transition: background-color 150ms;
+
+  .rlc-title {
+    font-weight: bold;
+  }
+
+  &:hover {
+    background-color: var(--tw-prose-body);
+
+    .rlc-title {
+      color: var(--tw-prose-hr);
+    }
+
+    @media (prefers-color-scheme: dark) {
+      background-color: var(--tw-prose-body);
+    }
+  }
+
+  @media (width >= 60ch) {
+    grid-template-columns: 1fr 220px;
+  }
+
+  .rlc-info {
+    display: flex;
+    flex-direction: column;
+    grid-column: 1;
+    justify-content: center;
+    min-width: 100%;
+    max-width: 100%;
+    padding: var(--padding-y) 0 var(--padding-y) var(--padding-x);
+    font-weight: normal;
+    border-radius: var(--border-radius) 0 0 var(--border-radius);
+
+    .rlc-description {
+      margin-bottom: 0.5em;
+      overflow: hidden;
+      font-size: 0.8rem;
+      color: #737373;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      -webkit-line-clamp: 1;
+
+      @media (prefers-color-scheme: dark) {
+        color: #a3a3a3;
+      }
+    }
+
+    .rlc-url-container {
+      display: flex;
+      gap: 0.5rem;
+      align-items: center;
+
+      .rlc-favicon {
+        margin-top: 0.15rem;
+        margin-bottom: 0;
+      }
+
+      .rlc-url {
+        overflow: hidden;
+        font-size: 0.8rem;
+        color: #525252;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        -webkit-line-clamp: 1;
+
+        @media (prefers-color-scheme: dark) {
+          color: #d4d4d4;
+        }
+      }
+    }
+  }
+
+  .rlc-image-container {
+    grid-column: 2;
+    aspect-ratio: 1 / 1;
+
+    @media (width >= 60ch) {
+      aspect-ratio: 1.91 / 1;
+    }
+
+    .rlc-image {
+      width: 100%;
+      height: 100%;
+      margin: 0;
+      object-fit: cover;
+      border-radius: 0 var(--border-radius) var(--border-radius) 0;
+    }
+  }
+}

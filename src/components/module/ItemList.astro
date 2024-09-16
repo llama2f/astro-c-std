@@ -1,0 +1,10 @@
+---
+
+const {style,url,title} = Astro.props
+
+---
+
+<li>
+  <a href={url} class={`inline-block  ${style}`}>{title}</a>
+  <slot/>
+</li>
