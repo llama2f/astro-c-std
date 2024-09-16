@@ -1,0 +1,27 @@
+---
+import Social from './Social.astro'
+import Copyright from './Copyright.astro'
+import WrapperContent from '@components/module/WrapperContent.astro'
+import CardWrapper from '@components/module/CardWrapper.astro'
+import ItemBlock from '@components/module/ItemBlock.astro'
+---
+
+<footer class="bg-slate-600 text-slate-200 py-6">
+  <WrapperContent style="text-center">
+    <p>
+      ご依頼は<a href="https://twitter.com/caori_st">Twitter</a>のDMや<a
+        href="https://c-std.com/contact/">問合わせフォーム</a
+      >をご利用ください
+    </p>
+  </WrapperContent>
+  <WrapperContent>
+    <CardWrapper style="gap-4 justify-center">
+      <Social platform="twitter" username="caori_st" ><ItemBlock style="bg-slate-100 rounded py-1 text-sm text-slate-600 hover:bg-slate-300">twitter</ItemBlock></Social>
+      <Social platform="youtube" username="channel/UCYmNQQZfXHCMgDr5WZfoGUQ" ><ItemBlock style="bg-slate-100 rounded py-1 text-sm text-slate-600 hover:bg-slate-300">youtube</ItemBlock></Social>
+      <Social platform="github" username="llama2f" ><ItemBlock style="bg-slate-100 rounded py-1 text-sm text-slate-600 hover:bg-slate-300">github</ItemBlock></Social>
+    </CardWrapper>
+  </WrapperContent>
+  <WrapperContent style="text-center">
+    <Copyright publishedYear="2023" owner="caori" />
+  </WrapperContent>
+</footer>

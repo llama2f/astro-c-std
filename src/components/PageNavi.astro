@@ -1,0 +1,105 @@
+---
+//参考：　https://qiita.com/hyperdb/items/ceb5bc5e03ae04fa249b
+interface Props {
+    max_page: string;   // 最大ページ数
+    cur_page: number;   // 現在表示中のページ（1～）
+    base_url: string;   // リンク先のベースURL（末尾の'/'は不要）
+    nav_size?: string;  //  カレントの前後に何ブロック表示するか（デフォルト'2'）
+}
+const { cur_page, max_page, base_url, nav_size = "2" } = Astro.props;
+let page_list: string[] = [];
+
+for (let i = parseInt(nav_size); i > 0; i--) { //カレント前後の数より大きければ減らしていく　2
+    let pno = parseInt(cur_page) - i; //カレントから値を引く　2
+    if (pno > 0) { //カレントから値を引いた数が0を超えれば＝カレントページリストへプッシュ　＝0ならプッシュしない
+        page_list.push(pno.toString());
+    }
+}
+
+page_list.push(cur_page); //カレント追加
+
+for (let i = 1; i <= parseInt(nav_size); i++) {//カレント前後の数より大きければ増やしてていく　2
+    let pno = parseInt(cur_page) + i;
+    if (pno <= parseInt(max_page)) {
+        page_list.push(pno.toString());
+    }
+}
+/*
+console.log(page_list)
+console.log(page_list.length)
+console.log(cur_page)
+console.log(cur_page == page_list.length)
+*/
+
+const navAClass = 'flex items-center justify-center px-3 h-8 leading-tight text-gray-500 bg-white border border-gray-300 hover:bg-gray-100 hover:text-gray-700 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white'
+
+const navAClassCur = 'z-10 flex items-center justify-center px-3 h-8 leading-tight text-blue-600 border border-blue-300 bg-blue-50 hover:bg-blue-100 hover:text-blue-700 dark:border-gray-700 dark:bg-gray-700 dark:text-white">3</a>'
+
+const navAFirst= 'flex items-center justify-center px-3 h-8 ms-0 leading-tight text-gray-500 bg-white border rounded-s-lg border-e-0 border-gray-300 hover:bg-gray-100 hover:text-gray-700 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white'
+
+const navALast= 'flex items-center justify-center px-3 h-8 ms-0 leading-tight text-gray-500 bg-white border rounded-e-lg  border-e-0 border-gray-300 hover:bg-gray-100 hover:text-gray-700 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white'
+
+
+---
+
+
+<ul class="page-navi not-prose mx-auto flex h-8 list-none items-center justify-center -space-x-px text-sm">
+    <li>
+        {cur_page == 1 ? ( //現在地が先頭ならリンクなし
+        <div class={navAFirst}>
+        <span class="sr-only">Previous</span>
+        <svg class="h-2.5 w-2.5 rtl:rotate-180" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10">
+          <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 1 1 5l4 4"/>
+        </svg>
+      </div>
+        ):  //先頭以外ならリンクあり
+            cur_page ==2 ?( //2ならblogへ直接リンク
+                <a href={`/blog/`} class={navAFirst}><span class="sr-only">Previous</span>
+                <svg class="h-2.5 w-2.5 rtl:rotate-180" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10">
+                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 1 1 5l4 4"/>
+                </svg>
+            </a>
+            ):( //3以上なら前ページ
+                  <a href={`/blog/${cur_page - 1 }/`} class={navAFirst}>
+                    <span class="sr-only">Previous</span>
+                    <svg class="h-2.5 w-2.5 rtl:rotate-180" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10">
+                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 1 1 5l4 4"/>
+                    </svg>
+                </a>
+            )
+      
+        }
+    </li>
+    {
+        page_list.map((pno:string) => (
+        pno == cur_page ? (
+            <li class={navAClassCur} area-current='page'>{pno}</li>
+        ):
+            pno == '1' ? (                
+        <li><a href={`/${base_url}/`} class={navAClass}>{pno}</a></li>
+               
+            ) :(
+        <li><a href={`/${base_url}/${pno}/`} class={navAClass}>{pno}</a></li>
+    )
+        ))
+    }
+
+    <li>
+        {cur_page == page_list.length ? ( //現在地が最後ならリンクなし
+        <div class={navALast}>
+        <span class="sr-only">Next</span>
+        <svg class="h-2.5 w-2.5 rtl:rotate-180" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10">
+          <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 9 4-4-4-4"/>
+        </svg>
+      </div>
+        ):(  //最後以外ならリンクあり        
+                <a href={`/blog/${cur_page + 1}`} class={navALast}><span class="sr-only">Next</span>
+                 <svg class="h-2.5 w-2.5 rtl:rotate-180" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10">
+          <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 9 4-4-4-4"/>
+        </svg>
+            </a>    
+            )
+      
+        }
+    </li>
+  </ul>
