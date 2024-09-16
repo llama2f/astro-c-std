@@ -21,9 +21,8 @@ const { pageTitle,schema,desc,eyecatch,pubDate,upDate} = Astro.props
 <html lang="ja">
   <head>
     <meta charset="utf-8" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="icon" href={`${sitePath}/favicon.ico`} />
     <meta name="viewport" content="width=device-width" />
-    <meta name="generator" content="{Astro.generator}" />
     <title>{isIndexPage ? pageTitle : `${pageTitle}│${siteName}`}</title>
     <link rel="sitemap" href="/sitemap-index.xml" />
      <link
