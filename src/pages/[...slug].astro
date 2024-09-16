@@ -2,19 +2,50 @@
 import { getCollection } from 'astro:content'
 import MarkdownPostLayout from '../layouts/MarkdownPostLayout.astro'
 import MdxPicture from '../components/MdxPicture.astro'
+import {getRelatedPosts} from '../scripts/getRelatedPosts'
+import RelatedPosts from '@components/RelatedPosts.astro'
+import TagsAtPage from '@components/TagsAtPage.astro'
+
 // 1. コレクションエントリーごとに新しいパスを生成
 export async function getStaticPaths() {
-  const blogEntries = await getCollection('blog')
-  return blogEntries.map((entry) => ({
+  const allPosts = await getCollection('blog', ({ data }) => {
+  return data.isDraft !== true;
+  })
+    
+  return allPosts.map((entry) => ({
+
     params: { slug: entry.slug },
-    props: { entry },
+    props: { entry ,
+            relatedPosts: getRelatedPosts(
+              allPosts,
+              entry.slug,
+              entry.data.tags
+            )
+    },
+    
   }))
 }
+
+
 // 2. テンプレートでは、プロパティからエントリーを直接取得できる
-const { entry } = Astro.props
+const { entry,relatedPosts } = Astro.props
 const { Content } = await entry.render()
 ---
 
 <MarkdownPostLayout frontmatter={entry.data}>
   <Content components={{ img: MdxPicture }} />
+  
+   <TagsAtPage entry={entry} />
+   <RelatedPosts havePosts = {relatedPosts.length}>
+     {relatedPosts.length > 0 && (
+      relatedPosts.map((post) => (
+     
+        <li><a href={`/${post.slug}/`}>{post.data.title}</a></li>
+      ))
+       )}
+   </RelatedPosts>
+
 </MarkdownPostLayout>
+
+
+   

@@ -4,11 +4,11 @@ pubDate: 2023-08-06
 categories:
   - electronics
 tags:
-  - Electronics-Aircon
   - DIY
   - Temperature-Humidity
+  - Electronics
 image: ./images/20230806_124213_0000.jpg
-relatedPosts:
+relatedPosts: 
 isDraft: false
 ---
 

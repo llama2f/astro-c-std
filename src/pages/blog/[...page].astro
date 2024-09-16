@@ -11,7 +11,12 @@ export async function getStaticPaths({ paginate }) {
   const pages = await getCollection('blog', ({ data }) => {
   return data.isDraft !== true;
 });
-  return paginate(pages, { pageSize: 15 });
+const sortedPages = pages.sort((a,b)=>{
+  const aDate = new Date(a.data.pubDate)
+  const bDate = new Date(b.data.pubDate)
+  return bDate - aDate
+})
+  return paginate(sortedPages, { pageSize: 15 });
 }
 
 //全記事数

@@ -14,7 +14,7 @@ const sitePath = Astro.site;
 const siteName = import.meta.env.SITE_NAME
 const pagePath=Astro.url.pathname
 const isIndexPage = Astro.url.pathname === "/";
-const { pageTitle,schema,desc} = Astro.props
+const { pageTitle,schema,desc,eyecatch,pubDate,upDate} = Astro.props
 
 ---
 
@@ -34,7 +34,7 @@ const { pageTitle,schema,desc} = Astro.props
       referrerpolicy="no-referrer"
     />
 
-  <SchemaJson pageTitle={pageTitle} schema={schema} />
+  <SchemaJson pageTitle={pageTitle} schema={schema} eyecatch={eyecatch} pubDate={pubDate} upDate={upDate} />
 
   <AstroSeo
   title={isIndexPage ? pageTitle : `${pageTitle}│${siteName}`}
@@ -46,7 +46,7 @@ const { pageTitle,schema,desc} = Astro.props
     description: 'c-studio',
     images: [
       {
-        url: 'https://www.example.ie/og-image-01.jpg',
+        url: eyecatch ? eyecatch.src : '../assets/images/noimage.png',
         width: 800,
         height: 600,
         alt: 'Og Image Alt',
@@ -95,7 +95,7 @@ const { pageTitle,schema,desc} = Astro.props
         <h1 class="m-6 max-w-screen-sm border p-6
                     text-center text-2xl uppercase tracking-wide
                     dark:text-slate-200">{pageTitle}</h1>
-        <div class="prose prose-slate
+        <div class="prose prose-slate w-full
                     mx-auto max-w-screen-sm p-6
                     text-slate-600 dark:prose-invert  prose-h2:text-slate-600 prose-a:text-blue-600 prose-strong:text-slate-600 
                     dark:text-slate-300 dark:prose-h2:text-slate-300 dark:prose-a:text-cyan-100">

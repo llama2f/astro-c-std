@@ -4,12 +4,13 @@ pubDate: 2023-09-20
 categories:
   - diy
 tags:
-  - Temperature-Humidity
   - DIY
   - UnderFloor
-  - Condensation
+  - Temperature-Humidity
 image: ./images/yuka_keturo_thumb.jpg
 isDraft: false
+cDate: 2024-08-14
+upDate: 2024-09-13
 ---
 
 夏、床下に潜ったら結露を見つけました。いつものように床下に潜っていたらいつの間にか手が濡れており、最初は何なのかわからず水漏れか？と。よくよく周りを見渡し、触ると…これは結露…！
@@ -173,11 +174,11 @@ isDraft: false
 
 何にせよ外気と床下の環境計測が必須なので、アプリで確認できる温湿度計の導入をおすすめします。私は[SwitchBot 防湿温湿度計](https://amzn.to/44WYtzm)を使っていますが、[Tapo](https://amzn.to/48pgcCg)などからも手頃な価格で販売されています。
 
-[![](//ws-fe.amazon-adsystem.com/widgets/q?_encoding=UTF8&ASIN=B0BVLYPYT1&Format=_SL160_&ID=AsinImage&MarketPlace=JP&ServiceVersion=20070822&WS=1&tag=ctc-22&language=ja_JP)](https://www.amazon.co.jp/dp/B0BVLYPYT1?_encoding=UTF8&th=1&linkCode=li2&tag=ctc-22&linkId=e9f35f947b25511ea10ee31812f5a332&language=ja_JP&ref_=as_li_ss_il)![](https://ir-jp.amazon-adsystem.com/e/ir?t=ctc-22&language=ja_JP&l=li2&o=9&a=B0BVLYPYT1)
+<!-- HTML code for ASIN : B0BVLYPYT1--> <div class="paapi5-pa-ad-unit pull-left"><div class="paapi5-pa-product-container"><div class="paapi5-pa-product-image"><div class="paapi5-pa-product-image-wrapper"><a class="paapi5-pa-product-image-link" href="https://www.amazon.co.jp/dp/B0BVLYPYT1?tag=ctc-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" title="【熱中症対策】SwitchBot 防水温湿度計 Alexa 温度計 湿度計 - スイッチボット ワイヤレス 室内 屋外用 温湿度計 スマホで温度湿度管理 デジタル 高精度 コンパクト 温度 湿度 絶対湿度 異常通知 グラフ記録 スマートホーム Alexa Google Home IFTTT イフト Siriに対応(ハブ必要)" target="_blank"></a><img class="paapi5-pa-product-image-source" src="assets/images/amazon-no-image.jpg" alt="【熱中症対策】SwitchBot 防水温湿度計 Alexa 温度計 湿度計 - スイッチボット ワイヤレス 室内 屋外用 温湿度計 スマホで温度湿度管理 デジタル 高精度 コンパクト 温度 湿度 絶対湿度 異常通知 グラフ記録 スマートホーム Alexa Google Home IFTTT イフト Siriに対応(ハブ必要)"></div></div><div class="paapi5-pa-product-details"><div class="paapi5-pa-product-title"><a class="paap5-pa-product-title-link" href="https://www.amazon.co.jp/dp/B0BVLYPYT1?tag=ctc-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" title="【熱中症対策】SwitchBot 防水温湿度計 Alexa 温度計 湿度計 - スイッチボット ワイヤレス 室内 屋外用 温湿度計 スマホで温度湿度管理 デジタル 高精度 コンパクト 温度 湿度 絶対湿度 異常通知 グラフ記録 スマートホーム Alexa Google Home IFTTT イフト Siriに対応(ハブ必要)" target="_blank">【熱中症対策】SwitchBot 防水温湿度計 Alexa 温度計 湿度計 - スイッチボット ワイヤレス 室内 屋外用 温湿度計 スマホで温度湿度管理 デジタル 高精度 コンパクト 温度 湿度 絶対湿度 異常通知 グラフ記録 スマートホーム Alexa Google Home IFTTT イフト Siriに対応(ハブ必要)</a></div><div class="paapi5-pa-product-list-price"><span class="paapi5-pa-product-list-price-value"></span></div><div class="paapi5-pa-product-prime-icon"><span class="icon-prime-all"></span></div></div></div></div>
 
-↑SwitchBot、↓Tapo。普段お使いのメーカーがあればそれで選べば問題なし。
+↑SwitchBot、↓Tapo。普段お使いのメーカーがあればそれで選べば問題なし（どちらもハブが必要）。
 
-[![](//ws-fe.amazon-adsystem.com/widgets/q?_encoding=UTF8&ASIN=B0BLRQ5HTT&Format=_SL160_&ID=AsinImage&MarketPlace=JP&ServiceVersion=20070822&WS=1&tag=ctc-22&language=ja_JP)](https://www.amazon.co.jp/TP-Link-Tapo-T310-US/dp/B0BLRQ5HTT?__mk_ja_JP=%E3%82%AB%E3%82%BF%E3%82%AB%E3%83%8A&crid=RXXOJZP7ZI74&keywords=%E3%81%9F%E3%81%BD%2B%E6%B8%A9%E6%B9%BF%E5%BA%A6%E8%A8%88&qid=1695192075&sprefix=%E3%81%9F%E3%81%BD%2B%E6%B8%A9%E6%B9%BF%E5%BA%A6%E8%A8%88%2Caps%2C152&sr=8-5&th=1&linkCode=li2&tag=ctc-22&linkId=14785728453c58f918aa2b1177436661&language=ja_JP&ref_=as_li_ss_il)![](https://ir-jp.amazon-adsystem.com/e/ir?t=ctc-22&language=ja_JP&l=li2&o=9&a=B0BLRQ5HTT)
+<!-- HTML code for ASIN : B0BLRQ5HTT--> <div class="paapi5-pa-ad-unit pull-left"><div class="paapi5-pa-product-container"><div class="paapi5-pa-product-image"><div class="paapi5-pa-product-image-wrapper"><a class="paapi5-pa-product-image-link" href="https://www.amazon.co.jp/dp/B0BLRQ5HTT?tag=ctc-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" title="TP-Link Wi-Fi Tapo スマートホーム コンパクト 温湿度計 スイス 高精度 アラーム Tapoスマートハブ必須 Sub-1GHzスマート温湿度計 Tapo T310" target="_blank"></a><img class="paapi5-pa-product-image-source" src="assets/images/amazon-no-image.jpg" alt="TP-Link Wi-Fi Tapo スマートホーム コンパクト 温湿度計 スイス 高精度 アラーム Tapoスマートハブ必須 Sub-1GHzスマート温湿度計 Tapo T310"></div></div><div class="paapi5-pa-product-details"><div class="paapi5-pa-product-title"><a class="paap5-pa-product-title-link" href="https://www.amazon.co.jp/dp/B0BLRQ5HTT?tag=ctc-22&amp;linkCode=ogi&amp;th=1&amp;psc=1" title="TP-Link Wi-Fi Tapo スマートホーム コンパクト 温湿度計 スイス 高精度 アラーム Tapoスマートハブ必須 Sub-1GHzスマート温湿度計 Tapo T310" target="_blank">TP-Link Wi-Fi Tapo スマートホーム コンパクト 温湿度計 スイス 高精度 アラーム Tapoスマートハブ必須 Sub-1GHzスマート温湿度計 Tapo T310</a></div><div class="paapi5-pa-product-list-price"><span class="paapi5-pa-product-list-price-value"></span></div><div class="paapi5-pa-product-prime-icon"><span class="icon-prime-all"></span></div></div></div></div>
 
 ## 床下環境は気にしなさすぎず、気にしすぎず
 

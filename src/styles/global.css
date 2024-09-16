@@ -19,3 +19,157 @@ a:hover {
 pre {
   max-height: 600px;
 }
+
+/* amazon */
+
+.paapi5-pa-ad-unit {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 22px 20px;
+  margin: 2px;
+  overflow: hidden;
+  line-height: 1.1em;
+  border: 1px solid #eee;
+}
+
+.paapi5-pa-ad-unit * {
+  box-sizing: content-box;
+  padding: 0;
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  outline: none;
+  box-shadow: none;
+}
+
+.paapi5-pa-ad-unit a {
+  box-shadow: none !important;
+}
+
+.paapi5-pa-ad-unit a:hover {
+  color: #c45500;
+}
+
+.paapi5-pa-product-container {
+  width: 90%;
+  height: 210px;
+}
+
+.paapi5-pa-product-image {
+  display: table;
+  width: 150px;
+  height: 150px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.paapi5-pa-product-image-wrapper {
+  display: table-cell;
+  vertical-align: middle;
+}
+
+.paapi5-pa-product-image-source {
+  max-width: 150px;
+  max-height: 150px;
+  font-size: 12px;
+  vertical-align: bottom;
+}
+
+.paapi5-pa-percent-off {
+  position: absolute;
+  top: -16px;
+  right: -16px;
+  display: block;
+  width: 32px;
+  height: 25px;
+  padding-top: 8px;
+  font-size: 12px;
+  color: #fff;
+  text-align: center;
+  background: linear-gradient(to bottom, #cb0400, #a50200);
+  border-radius: 50%;
+}
+
+.paapi5-pa-ad-unit.hide-percent-off-badge .paapi5-pa-percent-off {
+  display: none;
+}
+
+.paapi5-pa-product-details {
+  display: inline-block;
+  width: 100%;
+  margin-top: 11px;
+  text-align: center;
+}
+
+.paapi5-pa-ad-unit .paapi5-pa-product-title a {
+  display: block;
+  width: 100%;
+  margin-bottom: 3px;
+  overflow: hidden;
+  font-size: 13px;
+  color: #0066c0;
+  text-decoration: none;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.paapi5-pa-ad-unit .paapi5-pa-product-title a:hover {
+  color: #c45500;
+  text-decoration: underline;
+}
+
+.paapi5-pa-product-offer-price {
+  font-size: 13px;
+  color: #111;
+}
+
+.paapi5-pa-product-offer-price-value {
+  margin-right: 3px;
+  font-size: 1.1em;
+  font-weight: bold;
+  color: #ab1700;
+}
+
+.paapi5-pa-product-list-price {
+  font-size: 13px;
+  color: #565656;
+  text-decoration: line-through;
+}
+
+.paapi5-pa-product-prime-icon {
+  display: inline-block;
+  width: 52px;
+  height: 15px;
+  margin-top: -1px;
+  vertical-align: middle;
+  background: url("https://images-na.ssl-images-amazon.com/images/G/01/AUIClients/AmazonUIBaseCSS-sprite_2x_weblab_AUI_100106_T1-4e9f4ae74b1b576e5f55de370aae7aedaedf390d._V2_.png")
+    no-repeat -192px -911px;
+  background-size: 560px 938px;
+}
+
+.paapi5-pa-product-offer-price,
+.paapi5-pa-product-list-price,
+.paapi5-pa-product-prime-icon {
+  display: inline-block;
+  margin-right: 3px;
+}
+
+@media (min-device-pixel-ratio: 2), (resolution >= 192dpi) {
+  .paapi5-pa-product-prime-icon {
+    background: url("https://images-na.ssl-images-amazon.com/images/G/01/AUIClients/AmazonUIBaseCSS-sprite_2x_weblab_AUI_100106_T1-4e9f4ae74b1b576e5f55de370aae7aedaedf390d._V2_.png")
+      no-repeat -192px -911px;
+    background-size: 560px 938px;
+  }
+}
+
+@media screen and (width <= 440px) {
+  .paapi5-pa-ad-unit {
+    float: none;
+    width: 100%;
+  }
+
+  .paapi5-pa-product-container {
+    width: 100%;
+  }
+}

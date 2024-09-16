@@ -1,5 +1,4 @@
 [
-  "obsidian-kanban",
   "obsidian-memos",
   "table-editor-obsidian",
   "obsidian-advanced-uri",
@@ -16,11 +15,13 @@
   "obsidian-tagfolder",
   "auto-card-link",
   "obsidian-link-embed",
-  "obsidian-linter",
   "obsidian-auto-link-title",
   "obsidian-excalidraw-plugin",
   "obsidian-paste-image-rename",
   "image-converter",
   "mdx-as-md-obsidian",
-  "obsidian-link-converter"
+  "obsidian-link-converter",
+  "global-search-and-replace",
+  "obsidian-image-toolkit",
+  "obsidian-scroll-to-top-plugin"
 ]

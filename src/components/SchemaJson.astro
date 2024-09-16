@@ -1,10 +1,10 @@
 ---
 const pagePath=Astro.url.pathname
 const isIndexPage = Astro.url.pathname === "/";
-const { pageTitle,schema,desc} = Astro.props
+const { pageTitle,schema,desc,eyecatch,pubDate,upDate} = Astro.props
+const aboutPage = `${Astro.site}about`
 
-
-
+console.log(pubDate)
 const defSchema = JSON.stringify({
     "@context": "https://schema.org",
     "@type": "WebSite",
@@ -13,6 +13,7 @@ const defSchema = JSON.stringify({
      author:{
         '@type':'Person',
         name:import.meta.env.AUTHOR_NAME,
+        url: aboutPage
       }
 });
 
@@ -25,65 +26,44 @@ const schemaAbout = JSON.stringify({
         '@type':'Person',
         name:import.meta.env.AUTHOR_NAME,
       },
-    dateCreated: "2024-12-23T12:34:00-05:00",
-    dateModified: "2024-12-26T14:53:00-05:00",
+    dateCreated: pubDate,
+    dateModified: upDate,
     mainEntity: {
       "@type": "Person",
-      name: "Angelo Huff",
-      alternateName: "ahuff23",
-      identifier: "123475623",
-      interactionStatistic: [{
-        "@type": "InteractionCounter",
-        interactionType: "https://schema.org/FollowAction",
-        userInteractionCount: 1
-      },{
-        "@type": "InteractionCounter",
-        interactionType: "https://schema.org/LikeAction",
-        userInteractionCount: 5
-      }],
-      agentInteractionStatistic: {
-       " @type": "InteractionCounter",
-        interactionType: "https://schema.org/WriteAction",
-        userInteractionCount: 2346
-      },
-      description: "Defender of Truth",
-      image: "https://example.com/avatars/ahuff23.jpg",
-      sameAs: [
-        "https://www.example.com/real-angelo",
-        "https://example.com/profile/therealangelohuff"
-      ]
+      name: import.meta.env.AUTHOR_NAME,
+      alternateName: "caori_st",
+      description: "WEB制作、イラストレーター",
+      image: "../assets/images/noimage.png"
     }
 });
 
 
 const schemaBlog = JSON.stringify({
-   "@context": "https://schema.org",
-"@type": "BlogPosting",
-headline: "Title of a News Article",
-image: [
-  "https://example.com/photos/1x1/photo.jpg",
-  "https://example.com/photos/4x3/photo.jpg",
-  "https://example.com/photos/16x9/photo.jpg"
-],
-datePublished: "2024-01-05T08:00:00+08:00",
-dateModified: "2024-02-05T09:20:00+08:00",
-author: [{
-  "@type": "Person",
-  name: "Jane Doe",
-  url: "https://example.com/profile/janedoe123"
-}, {
-  "@type": "Person",
-  name: "John Doe",
-  url: "https://example.com/profile/johndoe123"
-}]
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    headline: pageTitle,
+    image: [
+       eyecatch ? eyecatch.src : '../assets/images/noimage.png'
+    ],
+    datePublished: pubDate,
+    dateModified: upDate,
+    author: [{
+      '@type':'Person',
+      name:import.meta.env.AUTHOR_NAME,
+      url: aboutPage
+    },]
 });
 
 let setSchema = defSchema
 
 if(schema == "about"){
  setSchema = schemaAbout
+  console.log(`schema: ${schema}`)
 }else if(schema == "blog"){
-  setSchema + schemaBlog
+  console.log(`schema: ${schema}`)
+  setSchema = schemaBlog
+}else{
+   console.log(`schema: ${schema}`)
 }
 ---
 

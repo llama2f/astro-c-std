@@ -5,13 +5,13 @@ tags:
 categories:
   - diy
 pubDate: 2024-09-03
-upDate: ""
+upDate: 2024-09-15
 image: noimage.png
 description: 
 author: caori
 isDraft: true
-cDate: 2024-09-02
 ---
+
 わが家の寝室は北側である。
 寝室だからか北側だからかはたまた断熱性気密性の低さなのか、カビが生えやすい。
 そしてズボラなためか掃除洗濯もサボりがちで、寝具周りが臭い。

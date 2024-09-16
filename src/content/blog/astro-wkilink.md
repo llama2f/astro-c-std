@@ -1,5 +1,5 @@
 ---
-title: astro-wikilink
+title: AstroでObsidianのwikiリンク形式を使用する
 tags:
   - Web
   - astro

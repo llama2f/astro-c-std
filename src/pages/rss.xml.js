@@ -8,13 +8,13 @@ export async function GET() {
   const posts = await getCollection('blog')
   return rss({
     title: 'c-studio',
-    description: 'caori_stのWEBとブログ　DIYなど雑多ブログも',
+    description: 'caoriのWEBとブログ',
     site: 'https://c-std.com/',
     items: posts.map((post) => ({
       title: post.data.title,
       pubDate: post.data.pubDate,
       description: post.data.description,
-      link: `/posts/${post.slug}/`,
+      link: `/${post.slug}/`,
       content: sanitizeHtml(parser.render(post.body)),
       ...post.data,
     })),

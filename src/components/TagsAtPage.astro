@@ -1,0 +1,14 @@
+---
+const {entry} = Astro.props
+import ItemBlock from '@components/module/ItemBlock.astro'
+import CardWrapper from '@components/module/CardWrapper.astro'
+import Tag from '@components/Tag.astro'
+---
+
+<ItemBlock style="px-0">  
+     <CardWrapper style="gap-4">
+      {entry.data.tags.map((tag) =>
+      <Tag tag={tag}></Tag>
+     )}
+     </CardWrapper>
+</ItemBlock>

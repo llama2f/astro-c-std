@@ -1,8 +1,9 @@
 ---
-import '../styles/global.css'
 import BaseLayout from '../layouts/BaseLayout.astro'
 import CardWrapper from '@components/module/CardWrapper.astro'
 import IllustPost from '@components/IllustPost.astro'
+
+import bcweb from '../assets/images/web-buildcluster.jpg';
 
 import yagi from '../assets/illusts/yagi_comp.png'
 import iconGal from '../assets/illusts/icon_gllasgirl.png';
@@ -11,11 +12,19 @@ import iconGeek from '../assets/illusts/iconpic_boy_python.png';
 import OniAkuma from '../assets/illusts/20201021.jpg';
 import TukiUsagi from '../assets/illusts/77070552_p0.png';
 
-const pageTitle = 'Illust'
+const pageTitle = 'Works'
 ---
 
-<BaseLayout pageTitle={pageTitle} desc="イラストの紹介です。"> 
+<BaseLayout pageTitle={pageTitle} desc="お仕事の紹介です。"> 
 
+  <h2>WebSite</h2>
+
+  <CardWrapper style="flex-wrap justify-around not-prose gap-4">
+    <IllustPost src={bcweb} alt='株式会社ビルドクラスタ様' ><p class="text-sm text-center p-1"><a href="https://build-cluster.co.jp">株式会社ビルドクラスタ様</a></p></IllustPost>
+  </CardWrapper>
+
+
+  <h2>Illust</h2>
   <p>納品後データが消失したため趣味イラストばかりになっています。すみません。</p>
 
   <CardWrapper style="flex-wrap justify-around not-prose gap-4">

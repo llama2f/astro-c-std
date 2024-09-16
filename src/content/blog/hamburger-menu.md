@@ -2,10 +2,11 @@
 title: 基本のハンバーガーメニューのつくりかた
 tags:
   - Web
+  - CSS
 categories:
   - menu
 pubDate: 2024-08-28
-upDate: 2024-08-30
+upDate: 2024-09-13
 image: noimage.png
 description: 
 author: caori
@@ -244,6 +245,4 @@ JavaScriptもhtml内に書いてるver。
 
 なお、アニメーションが動かない（アイコンが回転しない）理由として、リセットCSSとOSの視覚効果を減らす設定の影響があった。
 
-[CSSのtransformとかがリセットCSSで効かなかった](resetcss-animation)
-
-[[resetcss-animation]]
+[[resetcss-animation|CSSのtransformとかがリセットCSSで効かなかった]]

@@ -1,14 +1,11 @@
 ---
-title: <% tp.file.title %>
+title: 
 tags:
   - blog
-categories:
-  - diy
 pubDate: <% tp.date.now() %>
-upDate: 2024-08-30
-image: noimage.png
+upDate: 2024-09-15
+image: ./images/noimage.png
 description: 
 author: caori
 isDraft: true
-cDate: Invalid date
 ---
