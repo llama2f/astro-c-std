@@ -5,6 +5,8 @@ export.xml
 
 # generated types
 .astro/
+.vscode/
+.yarn/
 
 # dependencies
 node_modules/
