@@ -5,6 +5,8 @@ import ProfCard from '@components/ProfCard.astro'
 import CardWrapper from '@components/module/CardWrapper.astro'
 import CardInner from '@components/module/CardInner.astro'
 import PostComments from '@components/PostComments.astro'
+import AdsDisplay from '@components/ads/AdsDisplay.astro'
+import AdsMulti from '@components/ads/AdsMulti.astro'
 
 const { frontmatter  } = Astro.props
 const image = frontmatter.image
@@ -19,9 +21,11 @@ const upDate = frontmatter.upDate
     { frontmatter.upDate?<CardInner><i class="fa-solid fa-rotate-right"></i> {upDate.toLocaleDateString()}</CardInner> : ''}
   </CardWrapper>
   
+  <AdsDisplay />
 <div class="slot md">
   <slot />
 </div>
+  <AdsMulti />
 <PostComments />
 <ProfCard />
 </BaseLayout>
