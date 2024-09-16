@@ -5,8 +5,8 @@ export.xml
 
 # generated types
 .astro/
-.vscode
-.yarn
+.vscode/
+.yarn/
 
 # dependencies
 node_modules/
@@ -32,3 +32,4 @@ pnpm-debug.log*
 blog/.obsidian/
 blog/.trash/
 blog/.git/
+ads/*
