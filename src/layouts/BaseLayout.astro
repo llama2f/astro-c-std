@@ -9,6 +9,7 @@ import Header from '../components/Header.astro'
 import Footer from '../components/Footer.astro'
 import { Breadcrumbs } from "astro-breadcrumbs";
 import SocialShare from '@components/SocialShare.astro';
+import AdsLazy from '@components/ads/AdsLazy.astro';
 import "astro-breadcrumbs/breadcrumbs.css";
 import "../styles/breadcrumbs.scss"
 
@@ -24,26 +25,20 @@ const eyecatchPath =  eyecatch?  new URL(eyecatch.src,sitePath).href : ""
 <html lang="ja">
   <head>
     <meta charset="utf-8" />
+    <link rel="canonical" href={sitePath + pagePath.slice(1)}>
     <link rel="icon" href={`${sitePath}favicon.ico`} />
     <meta name="viewport" content="width=device-width" />
     <title>{isIndexPage ? pageTitle : `${pageTitle}│${siteName}`}</title>
-    <link rel="sitemap" href="/sitemap-index.xml" />
-     <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
-      integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    />
+    <link rel="sitemap" href="/sitemap-index.xml" />     
+    <link href="/css/fontawesome.min.css" rel="stylesheet" media="print" onload="this.media='all'"/>
+    <link href="/css/brands.min.css" rel="stylesheet" media="print" onload="this.media='all'" />
+    <link href="/css/solid.min.css" rel="stylesheet" media="print" onload="this.media='all'" />
 
   <Analytics />
 
-  <SchemaJson pageTitle={pageTitle} schema={schema} eyecatch={eyecatch} pubDate={pubDate} upDate={upDate} />
+  <SchemaJson pageTitle={pageTitle} schema={schema} eyecatch={eyecatch} pubDate={pubDate} upDate={upDate} desc={desc} />
 
   <AstroSeo
-  title={isIndexPage ? pageTitle : `${pageTitle}│${siteName}`}
-  description={`${siteName}│${description}`}
-  canonical={sitePath + pagePath.slice(1)}
   openGraph={{
     url:pagePath,
     title: isIndexPage ? pageTitle : `${pageTitle}│${siteName}`,
@@ -100,6 +95,7 @@ const eyecatchPath =  eyecatch?  new URL(eyecatch.src,sitePath).href : ""
       </div>
     </main>
     <Footer/>
+    <AdsLazy />
   </body>
   <script>
     import '../scripts/menu.js'

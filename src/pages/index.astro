@@ -16,7 +16,10 @@ const schema = JSON.stringify({
   description: 'Web制作、イラスト制作をおこなっています',
 })
 
-const blogPosts = await getCollection('blog')
+const blogPosts=await getCollection('blog', ({ data }) => {
+  return data.isDraft !== true;
+});
+
 const sortedPosts = blogPosts.sort((a, b) => new Date(b.data.pubDate) - new Date(a.data.pubDate));
 const cuttedPosts = sortedPosts.slice(0,5)
 

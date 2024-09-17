@@ -5,18 +5,33 @@ const { pageTitle,schema,desc,eyecatch,pubDate,upDate} = Astro.props
 const aboutPage = `${Astro.site}about`
 const sitePath = Astro.site;
 const noImage = `${sitePath}noimage.png`
+const eyecatchPath =  eyecatch?  new URL(eyecatch.src,sitePath).href : ""
+const description = desc !== undefined ? desc : ""
 
-//console.log(pubDate)
+//console.log(desc)
 const defSchema = JSON.stringify({
     "@context": "https://schema.org",
+    description : description,
     "@type": "WebSite",
+    mainEntityOfPage: {
+        "@type": "WebPage",
+        "@id": sitePath,
+      },
+    image: 
+      {
+        url: eyecatch ? eyecatchPath : `${sitePath}noimage.png`,
+        "@type": "ImageObject",
+      },
     name:  isIndexPage ? import.meta.env.SITE_NAME : `${pageTitle}│${import.meta.env.SITE_NAME}`,
     url: Astro.url,
-     author:{
+    author:{
         '@type':'Person',
         name:import.meta.env.AUTHOR_NAME,
+        image: `${sitePath}icon_normal400.png`,
         url: aboutPage
-      }
+      },
+    datePublished:pubDate,
+    dateModified:upDate
 });
 
 const schemaAbout = JSON.stringify({
@@ -42,18 +57,24 @@ const schemaAbout = JSON.stringify({
 
 const schemaBlog = JSON.stringify({
     "@context": "https://schema.org",
-    "@type": "BlogPosting",
+    "@type": "Article",
+    description:description,
     headline: pageTitle,
     image: [
        eyecatch ? eyecatch.src : noImage
     ],
+     mainEntityOfPage: {
+        "@type": "WebPage",
+        "@id": sitePath,
+      },
     datePublished: pubDate,
     dateModified: upDate,
-    author: [{
-      '@type':'Person',
-      name:import.meta.env.AUTHOR_NAME,
-      url: aboutPage
-    },]
+   author:[{
+        '@type':'Person',
+        name:import.meta.env.AUTHOR_NAME,
+        image: `${sitePath}icon_normal400.png`,
+        url: aboutPage
+      },]
 });
 
 let setSchema = defSchema

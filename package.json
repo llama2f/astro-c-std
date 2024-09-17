@@ -24,6 +24,7 @@
     "@astrojs/sitemap": "^3.1.6",
     "@astrojs/tailwind": "^5.1.0",
     "@astrolib/seo": "^1.0.0-beta.5",
+    "@playform/compress": "^0.1.1",
     "@portaljs/remark-wiki-link": "^1.2.0",
     "astro": "^4.13.0",
     "astro-breadcrumbs": "^2.3.1",
