@@ -1,4 +1,5 @@
 import mdx from '@astrojs/mdx'
+import partytown from '@astrojs/partytown'
 import preact from '@astrojs/preact'
 import sitemap from '@astrojs/sitemap'
 import tailwind from '@astrojs/tailwind'
@@ -6,17 +7,20 @@ import wikiLinkPlugin from '@portaljs/remark-wiki-link'
 import { defineConfig } from 'astro/config'
 import remarkLinkCard from 'remark-link-card'
 
-import partytown from '@astrojs/partytown'
-
 // https://astro.build/config
 export default defineConfig({
   site: 'https://c-std.com',
-  integrations: [preact(), sitemap(), mdx(), tailwind(), partytown()],
-  build: {
-    rollupOptions: {
-      // https://rollupjs.org/configuration-options/
-    },
-  },
+  integrations: [
+    preact(),
+    sitemap(),
+    mdx(),
+    tailwind(),
+    partytown({
+      config: {
+        forward: ['dataLayer.push'],
+      },
+    }),
+  ],
   vite: {
     css: {
       preprocessorOptions: {

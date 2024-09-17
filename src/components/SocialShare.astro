@@ -1,0 +1,32 @@
+---
+import { getShareUrl } from '@/scripts/Share';
+---
+
+
+<ul class="p-0 text-xl share list-none flex flex-row gap-4 [&>li]:inline-block">
+    <li>
+    <a href={getShareUrl('facebook', Astro.url)} target="_blank" rel="noopener">
+     <i class="fa-brands fa-facebook"></i>
+    </a>
+  </li>  
+  <li>
+    <a href={getShareUrl('twitter', Astro.url, 'Share!')} target="_blank" rel="noopener">
+      <i class="fa-brands fa-twitter"></i>
+    </a>
+  </li>
+  <li>
+    <a href={getShareUrl('pinterest', Astro.url, 'Share!')} target="_blank" rel="noopener">
+      <i class="fa-brands fa-pinterest"></i>
+    </a>
+  </li>
+   <li>
+      <a href={getShareUrl('line', Astro.url, 'Share!')} target="_blank" rel="noopener">
+      <i class="fa-brands fa-line"></i>
+      </a>
+    </li>
+    <li>
+      <a href={getShareUrl('email', Astro.url, 'Share!')} target="_blank" rel="noopener">
+        <i class="fa-regular fa-envelope"></i>
+      </a>
+    </li>
+</ul>

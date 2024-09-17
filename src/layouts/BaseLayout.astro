@@ -1,12 +1,14 @@
 ---
 import { AstroSeo } from '@astrolib/seo';
 import SchemaJson from '@components/SchemaJson.astro';
+import Analytics from '@components/ads/Analytics.astro'
 import 'modern-css-reset'
 import '../styles/global.css'
 import '../styles/hamburger-menu.css'
 import Header from '../components/Header.astro'
 import Footer from '../components/Footer.astro'
 import { Breadcrumbs } from "astro-breadcrumbs";
+import SocialShare from '@components/SocialShare.astro';
 import "astro-breadcrumbs/breadcrumbs.css";
 import "../styles/breadcrumbs.scss"
 
@@ -15,13 +17,14 @@ const siteName = import.meta.env.SITE_NAME
 const pagePath=Astro.url.pathname
 const isIndexPage = Astro.url.pathname === "/";
 const { pageTitle,schema,desc,eyecatch,pubDate,upDate} = Astro.props
-
+const description = desc !== undefined ? desc : ""
+const eyecatchPath =  eyecatch?  new URL(eyecatch.src,sitePath).href : ""
 ---
 
 <html lang="ja">
   <head>
     <meta charset="utf-8" />
-    <link rel="icon" href={`${sitePath}/favicon.ico`} />
+    <link rel="icon" href={`${sitePath}favicon.ico`} />
     <meta name="viewport" content="width=device-width" />
     <title>{isIndexPage ? pageTitle : `${pageTitle}│${siteName}`}</title>
     <link rel="sitemap" href="/sitemap-index.xml" />
@@ -33,33 +36,26 @@ const { pageTitle,schema,desc,eyecatch,pubDate,upDate} = Astro.props
       referrerpolicy="no-referrer"
     />
 
+  <Analytics />
+
   <SchemaJson pageTitle={pageTitle} schema={schema} eyecatch={eyecatch} pubDate={pubDate} upDate={upDate} />
 
   <AstroSeo
   title={isIndexPage ? pageTitle : `${pageTitle}│${siteName}`}
-  description={`${siteName}│${desc}`}
+  description={`${siteName}│${description}`}
   canonical={sitePath + pagePath.slice(1)}
   openGraph={{
     url:pagePath,
     title: isIndexPage ? pageTitle : `${pageTitle}│${siteName}`,
-    description: 'c-studio',
+    description: isIndexPage ?  `Web制作、イラスト制作` : description,
     images: [
       {
-        url: eyecatch ? eyecatch.src : '../assets/images/noimage.png',
-        width: 800,
-        height: 600,
-        alt: 'Og Image Alt',
+        url: eyecatch ? eyecatchPath : `${sitePath}noimage.png`,
+        width: 1920,
+        height: 1080,
+        alt: pageTitle,
         type: 'image/jpeg',
       },
-      {
-        url: 'https://www.example.ie/og-image-02.jpg',
-        width: 900,
-        height: 800,
-        alt: 'Og Image Alt Second',
-        type: 'image/jpeg',
-      },
-      { url: 'https://www.example.ie/og-image-03.jpg' },
-      { url: 'https://www.example.ie/og-image-04.jpg' },
     ],
     site_name: siteName,
   }}
@@ -98,6 +94,7 @@ const { pageTitle,schema,desc,eyecatch,pubDate,upDate} = Astro.props
                     mx-auto max-w-screen-sm p-6
                     text-slate-600 dark:prose-invert  prose-h2:text-slate-600 prose-a:text-blue-600 prose-strong:text-slate-600 
                     dark:text-slate-300 dark:prose-h2:text-slate-300 dark:prose-a:text-cyan-100">
+          <SocialShare />
           <slot />
         </div>
       </div>

@@ -12,6 +12,7 @@ const { frontmatter  } = Astro.props
 const image = frontmatter.image
 const pubDate = frontmatter.pubDate
 const upDate = frontmatter.upDate
+
 ---
 
 <BaseLayout pageTitle={frontmatter.title} currentPage={frontmatter.title} schema="blog" eyecatch={image} pubDate={pubDate} upDate={upDate}>

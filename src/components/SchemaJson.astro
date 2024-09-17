@@ -3,8 +3,10 @@ const pagePath=Astro.url.pathname
 const isIndexPage = Astro.url.pathname === "/";
 const { pageTitle,schema,desc,eyecatch,pubDate,upDate} = Astro.props
 const aboutPage = `${Astro.site}about`
+const sitePath = Astro.site;
+const noImage = `${sitePath}noimage.png`
 
-console.log(pubDate)
+//console.log(pubDate)
 const defSchema = JSON.stringify({
     "@context": "https://schema.org",
     "@type": "WebSite",
@@ -33,7 +35,7 @@ const schemaAbout = JSON.stringify({
       name: import.meta.env.AUTHOR_NAME,
       alternateName: "caori_st",
       description: "WEB制作、イラストレーター",
-      image: "../assets/images/noimage.png"
+      image: noImage
     }
 });
 
@@ -43,7 +45,7 @@ const schemaBlog = JSON.stringify({
     "@type": "BlogPosting",
     headline: pageTitle,
     image: [
-       eyecatch ? eyecatch.src : '../assets/images/noimage.png'
+       eyecatch ? eyecatch.src : noImage
     ],
     datePublished: pubDate,
     dateModified: upDate,
@@ -58,12 +60,12 @@ let setSchema = defSchema
 
 if(schema == "about"){
  setSchema = schemaAbout
-  console.log(`schema: ${schema}`)
+  //console.log(`schema: ${schema}`)
 }else if(schema == "blog"){
-  console.log(`schema: ${schema}`)
+  //console.log(`schema: ${schema}`)
   setSchema = schemaBlog
 }else{
-   console.log(`schema: ${schema}`)
+   //console.log(`schema: ${schema}`)
 }
 ---
 

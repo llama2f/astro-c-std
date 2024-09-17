@@ -2,8 +2,11 @@
 import { getCollection } from 'astro:content'
 import BaseLayout from '../../layouts/BaseLayout.astro'
 
-const allPosts = await getCollection('blog')
+const allPosts = await getCollection('blog', ({ data }) => {
+  return data.isDraft !== true;
+})
 const tags = [...new Set(allPosts.map((post) => post.data.tags).flat())]
+
 const pageTitle = 'Tags'
 ---
 <BaseLayout pageTitle={pageTitle} desc="タグ一覧です">  

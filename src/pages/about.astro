@@ -1,7 +1,6 @@
 ---
-import '../styles/global.css'
 import BaseLayout from '../layouts/BaseLayout.astro'
-const pageTitle = 'About c-studio'
+const pageTitle = 'About'
 const works = [
   'WEBデザイン、コーディング、制作全般',
   '事業用管理プログラム等制作',
@@ -29,7 +28,7 @@ const softs = [
 ]
 ---
 
-<BaseLayout pageTitle={pageTitle} schema='about' desc='宮城県在住のWEB屋、イラストレーターです。ものづくり全般、アクアリウム、魚や爬虫類両生類好きです。DIYで自宅をいじったりしています。'> 
+<BaseLayout pageTitle={pageTitle} schema='about' desc='宮城県在住のWEB屋、イラストレーター。ものづくり全般、アクアリウム、魚や爬虫類両生類好き。DIYで自宅をいじったりしています。'> 
   <div class="contentWrapper">
     <div class="aboutText">
       <p>
@@ -67,4 +66,3 @@ const softs = [
     </ul>
   </div>
 </BaseLayout>
- 
