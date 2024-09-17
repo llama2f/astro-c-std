@@ -7,13 +7,14 @@ const blog = defineCollection({
     z.object({
       title: z.string(),
       tags: z.array(z.string()),
-      categories: z.array(z.string().default('etc')),
       pubDate: z.date(),
+      upDate: z.date().optional(),
       author: z.string().default('caori'),
       isDraft: z.boolean(),
-      image: image(),
+      image: image().optional(),
     }),
 })
+
 const illust = defineCollection({
   type: 'content', // v2.5.0 and later
   schema: z.object({

@@ -1,10 +1,10 @@
 ---
-const { pubDate, upDate } = Astro.props
+import CardWrapper from '@components/module/CardWrapper.astro'
+import CardInner from '@components/module/CardInner.astro'
+const { pubDate, upDate ,style } = Astro.props
 ---
 
-<div class="date">
-  <ul>
-    <li class="pubDate">投稿日：{pubDate}</li>
-    <li class="upDate">更新日：{upDate}</li>
-  </ul>
-</div>
+  <CardWrapper style={style}>
+    <CardInner><i class=`fa-regular fa-clock`></i> {pubDate.toLocaleDateString()}</CardInner>
+    { upDate ? <CardInner><i class="fa-solid fa-rotate-right ml-4" ></i> {upDate.toLocaleDateString()}</CardInner> : ''}
+  </CardWrapper>
