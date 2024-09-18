@@ -3,29 +3,29 @@ import { getShareUrl } from '@/scripts/Share';
 ---
 
 
-<ul class="p-0 text-xl share list-none flex flex-row gap-4 [&>li]:inline-block">
+<ul class="p-0 [&_i]:text-2xl share list-none flex flex-row gap-4 [&>li]:inline-block min-h-[40px]">
     <li>
-    <a href={getShareUrl('facebook', Astro.url)} target="_blank" rel="noopener">
+    <a href={getShareUrl('facebook', Astro.url)} target="_blank" rel="noopener" area-label='share facebook' title="facebook">
      <i class="fa-brands fa-facebook"></i>
     </a>
   </li>  
   <li>
-    <a href={getShareUrl('twitter', Astro.url, 'Share!')} target="_blank" rel="noopener">
+    <a href={getShareUrl('twitter', Astro.url, 'Share!')} target="_blank" rel="noopener" area-label='share twitter' title="twitter">
       <i class="fa-brands fa-twitter"></i>
     </a>
   </li>
   <li>
-    <a href={getShareUrl('pinterest', Astro.url, 'Share!')} target="_blank" rel="noopener">
+    <a href={getShareUrl('pinterest', Astro.url, 'Share!')} target="_blank" rel="noopener" area-label='share pinterest' title="pinterest">
       <i class="fa-brands fa-pinterest"></i>
     </a>
   </li>
    <li>
-      <a href={getShareUrl('line', Astro.url, 'Share!')} target="_blank" rel="noopener">
+      <a href={getShareUrl('line', Astro.url, 'Share!')} target="_blank" rel="noopener"area-label='share line' title="line">
       <i class="fa-brands fa-line"></i>
       </a>
     </li>
     <li>
-      <a href={getShareUrl('email', Astro.url, 'Share!')} target="_blank" rel="noopener">
+      <a href={getShareUrl('email', Astro.url, 'Share!')} target="_blank" rel="noopener"area-label='share mail' title="mail">
         <i class="fa-regular fa-envelope"></i>
       </a>
     </li>

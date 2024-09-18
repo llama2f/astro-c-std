@@ -24,6 +24,13 @@ module.exports = {
         extraFileExtensions: ['.astro'],
       },
     },
+    {
+      files: ['*.js'],
+      parser: '@babel/eslint-parser', // or '@typescript-eslint/parser' depending on JS or TS
+      parserOptions: {
+        requireConfigFile: false, // for @babel/eslint-parser
+      },
+    },
   ],
   settings: {
     tailwindcss: {

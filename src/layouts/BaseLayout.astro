@@ -9,7 +9,6 @@ import Header from '../components/Header.astro'
 import Footer from '../components/Footer.astro'
 import { Breadcrumbs } from "astro-breadcrumbs";
 import SocialShare from '@components/SocialShare.astro';
-import AdsLazy from '@components/ads/AdsLazy.astro';
 import "astro-breadcrumbs/breadcrumbs.css";
 import "../styles/breadcrumbs.scss"
 
@@ -45,7 +44,7 @@ const eyecatchPath =  eyecatch?  new URL(eyecatch.src,sitePath).href : ""
     description: isIndexPage ?  `Web制作、イラスト制作` : description,
     images: [
       {
-        url: eyecatch ? eyecatchPath : `${sitePath}noimage.png`,
+        url: eyecatch ? eyecatchPath : `${sitePath}noimage.webp`,
         width: 1920,
         height: 1080,
         alt: pageTitle,
@@ -94,8 +93,7 @@ const eyecatchPath =  eyecatch?  new URL(eyecatch.src,sitePath).href : ""
         </div>
       </div>
     </main>
-    <Footer/>
-    <AdsLazy />
+    <Footer/>b
   </body>
   <script>
     import '../scripts/menu.js'

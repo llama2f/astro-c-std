@@ -6,6 +6,8 @@ import Dates from '@components/Dates.astro'
 import PostComments from '@components/PostComments.astro'
 import AdsDisplay from '@components/ads/AdsDisplay.astro'
 import AdsMulti from '@components/ads/AdsMulti.astro'
+import Pr from '@components/Pr.astro'
+import LinkSwitch from '@components/ads/LinkSwitch.astro'
 
 const { frontmatter  } = Astro.props
 const image = frontmatter.image
@@ -13,8 +15,9 @@ const pubDate = frontmatter.pubDate
 const upDate = frontmatter.upDate
 ---
 
-<BaseLayout pageTitle={frontmatter.title} currentPage={frontmatter.title} schema="blog" eyecatch={image} pubDate={pubDate} upDate={upDate}>
-  <img src={image.src} alt={frontmatter.title} width={image.width} height={image.height}/>
+<BaseLayout pageTitle={frontmatter.title} currentPage={frontmatter.title} schema="blog" eyecatch={image} pubDate={pubDate} upDate={upDate} isDraft={frontmatter.isDraft}>
+  <Pr />
+  <img src={image.src} alt={frontmatter.title} width={image.width} height={image.height} class="min-h-[200px]"/>
   <Dates pubDate={pubDate} upDate={upDate}/>
   
   <AdsDisplay />
@@ -22,6 +25,7 @@ const upDate = frontmatter.upDate
   <slot />
 </div>
   <AdsMulti />
+  <LinkSwitch />
 <PostComments />
 <ProfCard />
 </BaseLayout>
