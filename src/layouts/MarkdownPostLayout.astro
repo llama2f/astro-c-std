@@ -15,15 +15,17 @@ const { frontmatter  } = Astro.props
 const image = frontmatter.image
 const pubDate = frontmatter.pubDate
 const upDate = frontmatter.upDate
+
+console.log(frontmatter.description)
 ---
 
-<BaseLayout pageTitle={frontmatter.title} currentPage={frontmatter.title} schema="blog" eyecatch={image} pubDate={pubDate} upDate={upDate} isDraft={frontmatter.isDraft}>
+<BaseLayout pageTitle={frontmatter.title} desc={frontmatter.description} currentPage={frontmatter.title} schema="blog" eyecatch={image} pubDate={pubDate} upDate={upDate} isDraft={frontmatter.isDraft}>
   <Pr />
-  <img src={image.src} alt={frontmatter.title} width={image.width} height={image.height} class="aspect-auto"/>
+  <img src={image.src} alt={frontmatter.title} width={image.width} height={image.height} class="min-h-[200px] aspect-auto"/>
   <Dates pubDate={pubDate} upDate={upDate}/>
   
   <AdsDisplay />
-<div class="slot md">
+<div class="md">
   <slot />
 </div>
   <AdsMulti />

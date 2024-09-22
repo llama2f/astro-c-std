@@ -12,6 +12,7 @@ const blog = defineCollection({
       author: z.string().default('caori'),
       isDraft: z.boolean(),
       image: image().optional(),
+      description:z.string().optional()
     }),
 })
 
