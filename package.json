@@ -61,6 +61,7 @@
     "prettier-plugin-astro": "^0.10.0",
     "prettier-plugin-md-nocjsp": "^1.5.1",
     "prettier-plugin-organize-imports": "^4.0.0",
+    "rehype-auto-ads": "^1.1.4",
     "shiki": "^1.17.7",
     "stylelint": "^16.8.2",
     "stylelint-config-recess-order": "^5.0.1",
