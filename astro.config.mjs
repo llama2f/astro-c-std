@@ -14,7 +14,8 @@ export default defineConfig({
   site: 'https://c-std.com',
   integrations: [preact(), sitemap(), mdx(), tailwind(), partytown({
     config: {
-      forward: ['dataLayer.push']
+      forward: ['dataLayer.push'],
+      lib:'src/scripts/partytownLib/'
     }
   }), playformCompress()],
   vite: {

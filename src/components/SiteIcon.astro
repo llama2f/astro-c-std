@@ -1,8 +1,14 @@
 ---
 import { Image } from 'astro:assets';
-import icon from '../assets/icons/icon_normal.png'
+import icon from '@assets/icons/icon100.png'
+const siteName = import.meta.env.SITE_NAME
+
 
 ---
 <a href="/">
-  <Image src={icon} alt='c-studio' width={48}/>
+  <Image src={icon} alt={siteName}  
+    densities={[0.5, 1.5, 2]}
+    width={icon.width / 2.2}
+     />
 </a>
+b
