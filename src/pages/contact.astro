@@ -7,42 +7,20 @@ const SSGId=import.meta.env.SSG_ID
 const formStyle = ' text-slate-800 block border rounded py-1 px-2 dark:bg-slate-800 dark:text-slate-100'
 const textStyle = ' mb-2 w-3/6 dark:mb-2 dark:w-3/6'
 const textAreaStyle =' w-5/6 min-h-24 mb-2 dark:mb-2 dark:w-5/6 dark:min-h-24'
-const btnStyle=' bg-blue-400 text-slate-100 dark:text-slate-100 dark:bg-blue-500'
+const btnStyle=' bg-blue-400 text-slate-100 dark:text-slate-100 dark:bg-blue-500 mt-8'
 ---
 
 <BaseLayout pageTitle={pageTitle} desc="'お問い合わせはこちら">
+  <script src="https://www.google.com/recaptcha/api.js" async defer></script>
   <p>お仕事のご依頼、ご相談はじめどのようなことでもお気軽にお問い合わせください。 </p>
   <p class="text-sm">※1週間以内に返信を致します。返信ない場合はお手数ですがもう一度送信いただくか、Twitter（<a href="https://x.com/caori_st">@caori_st</a>）などにご連絡ください。</p>
-  <script src="https://www.google.com/recaptcha/api.js"></script>
   <form action=`https://ssgform.com/s/${SSGId}` method="post">
   <div style="display: none;"><input type="text" name="wana" /></div><!-- name="wana"を見えない状態で設置 -->
   <input type="text" name="お名前" required="required" placeholder="your name" class={`${formStyle + textStyle} `} />
   <input type="email" name="メールアドレス" required="required" placeholder="email" class={`${formStyle +textStyle} `}  />
   <textarea name="お問い合わせ内容" required="required" placeholder="message" class={formStyle + textAreaStyle} ></textarea>
-  <button class=`g-recaptcha ${formStyle + btnStyle}`
-          data-sitekey="6Ld3nEsqAAAAAAnTLyx-VvbnkfDhp1I7ks88FlGF"
-          data-callback="onSubmit"
-          data-action="submit">送信する</button><!-- 専用classとdata-属性を設定 -->
+ <div class="g-recaptcha" data-sitekey="6Lf23GMqAAAAAMiMNZpw5Wqm6gz5814U4J-NQXvZ"></div>
+  <button type="submit" class=`${formStyle + btnStyle}`>送信する</button>
 </form>
-</BaseLayout>
-<!-- 同一ページまたは読み込める場所にJavascript定義 -->
-<script >
-  const form = document.getElementById('sample-form')
-  const submitBtn = document.querySelectorAll('g-recaptcha')
-  submitBtn.forEach((btn) => {
-    btn.addEventListener('click' , () => {
-       if(form.reportValidity()) {
-      form.submit();
-    }
-    })
-  }) 
 
-/* 
-  function onSubmit(token) {
-    var form = document.getElementById('sample-form');
-    if(form.reportValidity()) {
-      form.submit();
-    }
-  } 
-*/
-</script>
+</BaseLayout>
