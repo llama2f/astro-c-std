@@ -26,11 +26,23 @@ const btnStyle=' bg-blue-400 text-slate-100 dark:text-slate-100 dark:bg-blue-500
 </form>
 </BaseLayout>
 <!-- 同一ページまたは読み込める場所にJavascript定義 -->
-<script>
+<script >
+  const form = document.getElementById('sample-form')
+  const submitBtn = document.querySelectorAll('g-recaptcha')
+  submitBtn.forEach((btn) => {
+    btn.addEventListener('click' , () => {
+       if(form.reportValidity()) {
+      form.submit();
+    }
+    })
+  }) 
+
+/* 
   function onSubmit(token) {
     var form = document.getElementById('sample-form');
     if(form.reportValidity()) {
       form.submit();
     }
-  }
+  } 
+*/
 </script>
