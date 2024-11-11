@@ -34,5 +34,6 @@ pnpm-debug.log*
 blog/.obsidian/
 blog/.trash/
 blog/.git/
+blog/*
 src/components/ads/
 live-sync.txt
